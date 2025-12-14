@@ -1,0 +1,909 @@
+{
+  "type": "syllable",
+  "lines": [
+    {
+      "st": 0.0,
+      "et": 0.0,
+      "txt": "Shape of You - Ed Sheeran",
+      "trans": "//",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 9.55,
+      "et": 9.55,
+      "txt": "The club isn't the best place to find a lover",
+      "trans": "俱乐部不是找另一半的绝佳场所",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 11.99,
+      "et": 11.99,
+      "txt": "So the bar is where I go",
+      "trans": "所以酒吧很适合我",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 15.0,
+      "et": 15.0,
+      "txt": "Me and my friends at the table doing shots",
+      "trans": "我和朋友们百无聊赖的喝着酒",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 17.1,
+      "et": 17.1,
+      "txt": "Drinking fast and then we talk slow",
+      "trans": "我们喝的很急 却漫不经心的聊着",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 19.79,
+      "et": 19.79,
+      "txt": "You come over and start up a conversation with just me",
+      "trans": "你向我走来 开始跟我搭讪",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 22.31,
+      "et": 22.31,
+      "txt": "And trust me I'll give it a chance now",
+      "trans": "相信我 我会给你机会的",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 24.53,
+      "et": 24.53,
+      "txt": "Take my hand stop put Van the Man on the jukebox",
+      "trans": "牵起我的手 我们点首Van The Man（爱尔兰歌手）的歌吧",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 27.35,
+      "et": 27.35,
+      "txt": "And then we start to dance and now I'm singing like",
+      "trans": "然后我们就可以翩然起舞了 此刻我的歌声像是",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 29.87,
+      "et": 29.87,
+      "txt": "Girl you know I want your love",
+      "trans": "女孩 你知道我渴望你的爱",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 32.47,
+      "et": 32.47,
+      "txt": "Your love was handmade for somebody like me",
+      "trans": "你的爱为我量身打造 专属于我",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 35.57,
+      "et": 35.57,
+      "txt": "Come on now follow my lead",
+      "trans": "来吧 听我指挥吧",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 37.44,
+      "et": 37.44,
+      "txt": "I may be crazy don't mind me",
+      "trans": "或许我有点疯狂 请不要介意",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 39.63,
+      "et": 39.63,
+      "txt": "Say boy let's not talk too much",
+      "trans": "说小子 不必多说废话",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 42.51,
+      "et": 42.51,
+      "txt": "Grab on my waist and put that body on me",
+      "trans": "将你的手搭上我的腰 贴近我吧",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 45.48,
+      "et": 45.48,
+      "txt": "Come on now follow my lead",
+      "trans": "来吧 听我指挥吧",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 47.16,
+      "et": 47.16,
+      "txt": "Come come on now follow my lead",
+      "trans": "来吧 来吧 听我指挥吧",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 50.84,
+      "et": 50.84,
+      "txt": "I'm in love with the shape of you",
+      "trans": "我爱上了你妙曼的姿态",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 53.34,
+      "et": 53.34,
+      "txt": "We push and pull like a magnet do",
+      "trans": "缠绵之间 我们像是磁铁般相互吸引",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 55.9,
+      "et": 55.9,
+      "txt": "Although my heart is falling too",
+      "trans": "尽管我的心早已为你沦陷",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 58.26,
+      "et": 58.26,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 60.86,
+      "et": 60.86,
+      "txt": "Last night you were in my room",
+      "trans": "昨晚你在我房间过夜",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 63.3,
+      "et": 63.3,
+      "txt": "And now my bed sheets smell like you",
+      "trans": "今晨床单上你的香气流连",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 65.31,
+      "et": 65.31,
+      "txt": "Every day discovering something brand new",
+      "trans": "每一天似乎焕然一新",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 68.33,
+      "et": 68.33,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 69.99,
+      "et": 69.99,
+      "txt": "Oh I oh I oh I oh I",
+      "trans": "噢 我无法自拔沦陷",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 73.35,
+      "et": 73.35,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 74.9,
+      "et": 74.9,
+      "txt": "Oh I oh I oh I oh I",
+      "trans": "噢 我无法自拔沦陷",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 78.36,
+      "et": 78.36,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 80.02,
+      "et": 80.02,
+      "txt": "Oh I oh I oh I oh I",
+      "trans": "噢 我无法自拔沦陷",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 83.33,
+      "et": 83.33,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 85.37,
+      "et": 85.37,
+      "txt": "Every day discovering something brand new",
+      "trans": "每一天似乎焕然一新",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 88.39,
+      "et": 88.39,
+      "txt": "I'm in love with the shape of you",
+      "trans": "我爱上了你妙曼的姿态",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 89.97,
+      "et": 89.97,
+      "txt": "One week in we let the story begin",
+      "trans": "一周时间 就让这爱情故事上演吧",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 91.96000000000001,
+      "et": 91.96000000000001,
+      "txt": "We're going out on our first date",
+      "trans": "我们可以开始属于我们的初次约会",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 94.7,
+      "et": 94.7,
+      "txt": "You and me are thrifty so go all you can eat",
+      "trans": "我们都很节俭 那就随你喜欢尽情挥霍一次",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 96.97999999999999,
+      "et": 96.97999999999999,
+      "txt": "Fill up your bag and I fill up a plate",
+      "trans": "包包里塞满吃的 我可以装满餐盘",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 99.50999999999999,
+      "et": 99.50999999999999,
+      "txt": "We talk for hours and hours about the sweet and the sour",
+      "trans": "这酸或甜足以让我们聊上几个小时",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 101.99000000000001,
+      "et": 101.99000000000001,
+      "txt": "And how your family is doing okay",
+      "trans": "你的家人还好吗",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 104.55,
+      "et": 104.55,
+      "txt": "Leave and get in a taxi then kiss in the backseat",
+      "trans": "坐上的士离开 我们在后座上热吻",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 106.94,
+      "et": 106.94,
+      "txt": "Tell the driver make the radio play and I'm singing like",
+      "trans": "让司机打开收音机 我的歌声像是",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 110.07,
+      "et": 110.07,
+      "txt": "Girl you know I want your love",
+      "trans": "女孩 你知道我渴望你的爱",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 112.47,
+      "et": 112.47,
+      "txt": "Your love was handmade for somebody like me",
+      "trans": "你的爱为我量身打造 专属于我",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 115.46000000000001,
+      "et": 115.46000000000001,
+      "txt": "Come on now follow my lead",
+      "trans": "来吧 听我指挥吧",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 117.45,
+      "et": 117.45,
+      "txt": "I may be crazy don't mind me",
+      "trans": "或许我有点疯狂 请不要介意",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 119.66,
+      "et": 119.66,
+      "txt": "Say boy let's not talk too much",
+      "trans": "说小子 不必多说废话",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 122.56,
+      "et": 122.56,
+      "txt": "Grab on my waist and put that body on me",
+      "trans": "将你的手搭上我的腰 贴近我吧",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 125.52,
+      "et": 125.52,
+      "txt": "Come on now follow my lead",
+      "trans": "来吧 听我指挥吧",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 127.21,
+      "et": 127.21,
+      "txt": "Come come on now follow my lead",
+      "trans": "来吧 来吧 听我指挥吧",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 130.82,
+      "et": 130.82,
+      "txt": "I'm in love with the shape of you",
+      "trans": "我爱上了你妙曼的姿态",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 133.31,
+      "et": 133.31,
+      "txt": "We push and pull like a magnet do",
+      "trans": "缠绵之间 我们像是磁铁般相互吸引",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 135.84,
+      "et": 135.84,
+      "txt": "Although my heart is falling too",
+      "trans": "尽管我的心早已为你沦陷",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 138.36,
+      "et": 138.36,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 140.73,
+      "et": 140.73,
+      "txt": "And last night you were in my room",
+      "trans": "昨晚你在我房间过夜",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 143.35,
+      "et": 143.35,
+      "txt": "And now my bed sheets smell like you",
+      "trans": "今晨床单上你的香气流连",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 145.3,
+      "et": 145.3,
+      "txt": "Every day discovering something brand new",
+      "trans": "每一天似乎焕然一新",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 148.37,
+      "et": 148.37,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 149.97,
+      "et": 149.97,
+      "txt": "Oh I oh I oh I oh I",
+      "trans": "噢 我无法自拔沦陷",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 153.25,
+      "et": 153.25,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 154.94,
+      "et": 154.94,
+      "txt": "Oh I oh I oh I oh I",
+      "trans": "噢 我无法自拔沦陷",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 158.22,
+      "et": 158.22,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 159.87,
+      "et": 159.87,
+      "txt": "Oh I oh I oh I oh I",
+      "trans": "噢 我无法自拔沦陷",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 163.29,
+      "et": 163.29,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 165.19,
+      "et": 165.19,
+      "txt": "Every day discovering something brand new",
+      "trans": "每一天似乎焕然一新",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 168.38,
+      "et": 168.38,
+      "txt": "I'm in love with the shape of you",
+      "trans": "我爱上了你妙曼的姿态",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 170.1,
+      "et": 170.1,
+      "txt": "Come on be my baby come on",
+      "trans": "来吧 宝贝来我身边",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 172.8,
+      "et": 172.8,
+      "txt": "Come on be my baby come on",
+      "trans": "来吧 宝贝来我身边",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 175.22,
+      "et": 175.22,
+      "txt": "Come on be my baby come on",
+      "trans": "来吧 宝贝来我身边",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 177.81,
+      "et": 177.81,
+      "txt": "Come on be my baby come on",
+      "trans": "来吧 宝贝来我身边",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 180.23,
+      "et": 180.23,
+      "txt": "Come on be my baby come on",
+      "trans": "来吧 宝贝来我身边",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 182.75,
+      "et": 182.75,
+      "txt": "Come on be my baby come on",
+      "trans": "来吧 宝贝来我身边",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 185.2,
+      "et": 185.2,
+      "txt": "Come on be my baby come on",
+      "trans": "来吧 宝贝来我身边",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 187.71,
+      "et": 187.71,
+      "txt": "Come on be my baby come on",
+      "trans": "来吧 宝贝来我身边",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 190.85,
+      "et": 190.85,
+      "txt": "I'm in love with the shape of you",
+      "trans": "我爱上了你妙曼的姿态",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 193.37,
+      "et": 193.37,
+      "txt": "We push and pull like a magnet do",
+      "trans": "缠绵之间 我们像是磁铁般相互吸引",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 195.88,
+      "et": 195.88,
+      "txt": "Although my heart is falling too",
+      "trans": "尽管我的心早已为你沦陷",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 198.32999999999998,
+      "et": 198.32999999999998,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 200.93,
+      "et": 200.93,
+      "txt": "Last night you were in my room",
+      "trans": "昨晚你在我房间过夜",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 203.35,
+      "et": 203.35,
+      "txt": "And now my bed sheets smell like you",
+      "trans": "今晨床单上你的香气流连",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 205.32,
+      "et": 205.32,
+      "txt": "Every day discovering something brand new",
+      "trans": "每一天似乎焕然一新",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 208.31,
+      "et": 208.31,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 210.25,
+      "et": 210.25,
+      "txt": "Come on be my baby come on",
+      "trans": "来吧 宝贝来我身边",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 213.4,
+      "et": 213.4,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 215.36,
+      "et": 215.36,
+      "txt": "Come on be my baby come on",
+      "trans": "来吧 宝贝来我身边",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 218.32,
+      "et": 218.32,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 220.25,
+      "et": 220.25,
+      "txt": "Come on be my baby come on",
+      "trans": "来吧 宝贝来我身边",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 223.36,
+      "et": 223.36,
+      "txt": "I'm in love with your body",
+      "trans": "你的身体让我无比眷恋",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 225.19,
+      "et": 225.19,
+      "txt": "Every day discovering something brand new",
+      "trans": "每一天似乎焕然一新",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 228.36,
+      "et": 228.36,
+      "txt": "I'm in love with the shape of you",
+      "trans": "我爱上了你妙曼的姿态",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    }
+  ],
+  "ai_status": "success",
+  "metadata": {
+    "title": "Shape of You",
+    "artist": "Ed Sheeran",
+    "album": null,
+    "duration_ms": 0,
+    "style_instruction": null,
+    "ai_config": null
+  },
+  "credits": [
+    "Lyrics by：Ed Sheeran/Steve Mac/Johnny McDaid",
+    "Composed by：Ed Sheeran/Steve Mac/Johnny McDaid",
+    "Produced by：Steve Mac"
+  ]
+}

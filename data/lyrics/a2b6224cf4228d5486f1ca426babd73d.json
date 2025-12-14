@@ -1,0 +1,2103 @@
+{
+  "type": "syllable",
+  "lines": [
+    {
+      "st": 6.591,
+      "et": 9.701,
+      "txt": "Hello it's me",
+      "trans": "你好 是我",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 6.591,
+          "et": 9.251000000000001
+        },
+        {
+          "txt": "it's ",
+          "st": 9.251,
+          "et": 9.401
+        },
+        {
+          "txt": "me",
+          "st": 9.401,
+          "et": 9.701
+        }
+      ]
+    },
+    {
+      "st": 12.081,
+      "et": 17.361,
+      "txt": "I was wondering if after all these years you'd like to meet",
+      "trans": "多年不见 你还想碰面吗？",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I ",
+          "st": 12.081,
+          "et": 12.261
+        },
+        {
+          "txt": "was ",
+          "st": 12.261,
+          "et": 12.450999999999999
+        },
+        {
+          "txt": "wondering ",
+          "st": 12.451,
+          "et": 13.511000000000001
+        },
+        {
+          "txt": "if ",
+          "st": 13.511,
+          "et": 14.011
+        },
+        {
+          "txt": "after ",
+          "st": 14.011,
+          "et": 14.780999999999999
+        },
+        {
+          "txt": "all ",
+          "st": 14.781,
+          "et": 15.201
+        },
+        {
+          "txt": "these ",
+          "st": 15.201,
+          "et": 15.561
+        },
+        {
+          "txt": "years ",
+          "st": 15.561,
+          "et": 16.201
+        },
+        {
+          "txt": "you'd ",
+          "st": 16.201,
+          "et": 16.391000000000002
+        },
+        {
+          "txt": "like ",
+          "st": 16.391,
+          "et": 16.750999999999998
+        },
+        {
+          "txt": "to ",
+          "st": 16.751,
+          "et": 17.001
+        },
+        {
+          "txt": "meet",
+          "st": 17.001,
+          "et": 17.361
+        }
+      ]
+    },
+    {
+      "st": 18.231,
+      "et": 21.36,
+      "txt": "To go over everything",
+      "trans": "叙叙旧 聊聊天",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "To ",
+          "st": 18.231,
+          "et": 18.431
+        },
+        {
+          "txt": "go ",
+          "st": 18.431,
+          "et": 18.751
+        },
+        {
+          "txt": "over ",
+          "st": 18.751,
+          "et": 20.68
+        },
+        {
+          "txt": "everything",
+          "st": 20.68,
+          "et": 21.36
+        }
+      ]
+    },
+    {
+      "st": 23.79,
+      "et": 29.58,
+      "txt": "They say that time's supposed to heal ya but I ain't done much healing",
+      "trans": "别人都说时间能治愈一切 可我心伤依旧",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "They ",
+          "st": 23.79,
+          "et": 24.009999999999998
+        },
+        {
+          "txt": "say ",
+          "st": 24.01,
+          "et": 24.41
+        },
+        {
+          "txt": "that ",
+          "st": 24.41,
+          "et": 24.63
+        },
+        {
+          "txt": "time's ",
+          "st": 24.63,
+          "et": 25.259999999999998
+        },
+        {
+          "txt": "supposed ",
+          "st": 25.26,
+          "et": 26.130000000000003
+        },
+        {
+          "txt": "to ",
+          "st": 26.13,
+          "et": 26.32
+        },
+        {
+          "txt": "heal ",
+          "st": 26.32,
+          "et": 26.64
+        },
+        {
+          "txt": "ya ",
+          "st": 26.64,
+          "et": 27.46
+        },
+        {
+          "txt": "but ",
+          "st": 27.46,
+          "et": 27.64
+        },
+        {
+          "txt": "I ",
+          "st": 27.64,
+          "et": 27.82
+        },
+        {
+          "txt": "ain't ",
+          "st": 27.82,
+          "et": 28.15
+        },
+        {
+          "txt": "done ",
+          "st": 28.15,
+          "et": 28.59
+        },
+        {
+          "txt": "much ",
+          "st": 28.59,
+          "et": 28.919999999999998
+        },
+        {
+          "txt": "healing",
+          "st": 28.92,
+          "et": 29.580000000000002
+        }
+      ]
+    },
+    {
+      "st": 30.48,
+      "et": 34.51,
+      "txt": "Hello can you hear me",
+      "trans": "喂？能听见吗？",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 30.48,
+          "et": 33.31
+        },
+        {
+          "txt": "can ",
+          "st": 33.31,
+          "et": 33.49
+        },
+        {
+          "txt": "you ",
+          "st": 33.49,
+          "et": 33.78
+        },
+        {
+          "txt": "hear ",
+          "st": 33.78,
+          "et": 34.160000000000004
+        },
+        {
+          "txt": "me",
+          "st": 34.16,
+          "et": 34.51
+        }
+      ]
+    },
+    {
+      "st": 36.35,
+      "et": 41.52,
+      "txt": "I'm in california dreaming about who we used to be",
+      "trans": "我在加州梦寐着你我曾经",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I'm ",
+          "st": 36.35,
+          "et": 36.550000000000004
+        },
+        {
+          "txt": "in ",
+          "st": 36.55,
+          "et": 36.769999999999996
+        },
+        {
+          "txt": "california ",
+          "st": 36.77,
+          "et": 38.31
+        },
+        {
+          "txt": "dreaming ",
+          "st": 38.31,
+          "et": 39.09
+        },
+        {
+          "txt": "about ",
+          "st": 39.09,
+          "et": 40.040000000000006
+        },
+        {
+          "txt": "who ",
+          "st": 40.04,
+          "et": 40.42
+        },
+        {
+          "txt": "we ",
+          "st": 40.42,
+          "et": 40.71
+        },
+        {
+          "txt": "used ",
+          "st": 40.71,
+          "et": 41.04
+        },
+        {
+          "txt": "to ",
+          "st": 41.04,
+          "et": 41.26
+        },
+        {
+          "txt": "be",
+          "st": 41.26,
+          "et": 41.519999999999996
+        }
+      ]
+    },
+    {
+      "st": 42.18,
+      "et": 46.2,
+      "txt": "When we were younger and free",
+      "trans": "当时的我们自由又年轻",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "When ",
+          "st": 42.18,
+          "et": 42.4
+        },
+        {
+          "txt": "we ",
+          "st": 42.4,
+          "et": 42.67
+        },
+        {
+          "txt": "were ",
+          "st": 42.67,
+          "et": 43.09
+        },
+        {
+          "txt": "younger ",
+          "st": 43.09,
+          "et": 45.68000000000001
+        },
+        {
+          "txt": "and ",
+          "st": 45.68,
+          "et": 45.91
+        },
+        {
+          "txt": "free",
+          "st": 45.91,
+          "et": 46.199999999999996
+        }
+      ]
+    },
+    {
+      "st": 48.54,
+      "et": 53.78,
+      "txt": "I've forgotten how it felt before the world fell at our feet",
+      "trans": "我已忘记脚下的世界崩塌前的平静",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I've ",
+          "st": 48.54,
+          "et": 48.75
+        },
+        {
+          "txt": "forgotten ",
+          "st": 48.75,
+          "et": 49.67
+        },
+        {
+          "txt": "how ",
+          "st": 49.67,
+          "et": 50.07
+        },
+        {
+          "txt": "it ",
+          "st": 50.07,
+          "et": 50.32
+        },
+        {
+          "txt": "felt ",
+          "st": 50.32,
+          "et": 51.2
+        },
+        {
+          "txt": "before ",
+          "st": 51.2,
+          "et": 51.760000000000005
+        },
+        {
+          "txt": "the ",
+          "st": 51.76,
+          "et": 51.989999999999995
+        },
+        {
+          "txt": "world ",
+          "st": 51.99,
+          "et": 52.54
+        },
+        {
+          "txt": "fell ",
+          "st": 52.54,
+          "et": 52.769999999999996
+        },
+        {
+          "txt": "at ",
+          "st": 52.77,
+          "et": 53.120000000000005
+        },
+        {
+          "txt": "our ",
+          "st": 53.12,
+          "et": 53.379999999999995
+        },
+        {
+          "txt": "feet",
+          "st": 53.38,
+          "et": 53.78
+        }
+      ]
+    },
+    {
+      "st": 54.25,
+      "et": 59.65,
+      "txt": "There's such a difference between us",
+      "trans": "我们之间太多分歧",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "There's ",
+          "st": 54.25,
+          "et": 54.46
+        },
+        {
+          "txt": "such ",
+          "st": 54.46,
+          "et": 54.85
+        },
+        {
+          "txt": "a ",
+          "st": 54.85,
+          "et": 55.160000000000004
+        },
+        {
+          "txt": "difference ",
+          "st": 55.16,
+          "et": 58.04
+        },
+        {
+          "txt": "between ",
+          "st": 58.04,
+          "et": 59.23
+        },
+        {
+          "txt": "us",
+          "st": 59.23,
+          "et": 59.65
+        }
+      ]
+    },
+    {
+      "st": 60.81,
+      "et": 64.49,
+      "txt": "And a million miles",
+      "trans": "相距也太过遥远",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "And ",
+          "st": 60.81,
+          "et": 61.010000000000005
+        },
+        {
+          "txt": "a ",
+          "st": 61.01,
+          "et": 61.199999999999996
+        },
+        {
+          "txt": "million ",
+          "st": 61.2,
+          "et": 63.290000000000006
+        },
+        {
+          "txt": "miles",
+          "st": 63.29,
+          "et": 64.49
+        }
+      ]
+    },
+    {
+      "st": 67.41,
+      "et": 69.78,
+      "txt": "Hello from the other side",
+      "trans": "一声你好 来自世界彼端",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 67.41,
+          "et": 68.08
+        },
+        {
+          "txt": "from ",
+          "st": 68.08,
+          "et": 68.36
+        },
+        {
+          "txt": "the ",
+          "st": 68.36,
+          "et": 68.58
+        },
+        {
+          "txt": "other ",
+          "st": 68.58,
+          "et": 69.5
+        },
+        {
+          "txt": "side",
+          "st": 69.5,
+          "et": 69.78
+        }
+      ]
+    },
+    {
+      "st": 73.13,
+      "et": 79.48,
+      "txt": "I must've called a thousand times to tell you",
+      "trans": "无数次拨打这个号码 只为告诉你",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I ",
+          "st": 73.13,
+          "et": 73.32
+        },
+        {
+          "txt": "must've ",
+          "st": 73.32,
+          "et": 73.96
+        },
+        {
+          "txt": "called ",
+          "st": 73.96,
+          "et": 74.28999999999999
+        },
+        {
+          "txt": "a ",
+          "st": 74.29,
+          "et": 74.64
+        },
+        {
+          "txt": "thousand ",
+          "st": 74.64,
+          "et": 75.56
+        },
+        {
+          "txt": "times ",
+          "st": 75.56,
+          "et": 78.39
+        },
+        {
+          "txt": "to ",
+          "st": 78.39,
+          "et": 78.72
+        },
+        {
+          "txt": "tell ",
+          "st": 78.72,
+          "et": 79.16
+        },
+        {
+          "txt": "you",
+          "st": 79.16,
+          "et": 79.47999999999999
+        }
+      ]
+    },
+    {
+      "st": 80.12,
+      "et": 83.88,
+      "txt": "I'm sorry for everything that I've done",
+      "trans": "我想为自己所做的一切说声抱歉",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I'm ",
+          "st": 80.12,
+          "et": 80.33
+        },
+        {
+          "txt": "sorry ",
+          "st": 80.33,
+          "et": 82.09
+        },
+        {
+          "txt": "for ",
+          "st": 82.09,
+          "et": 82.31
+        },
+        {
+          "txt": "everything ",
+          "st": 82.31,
+          "et": 82.89
+        },
+        {
+          "txt": "that ",
+          "st": 82.89,
+          "et": 83.17
+        },
+        {
+          "txt": "I've ",
+          "st": 83.17,
+          "et": 83.53
+        },
+        {
+          "txt": "done",
+          "st": 83.53,
+          "et": 83.88
+        }
+      ]
+    },
+    {
+      "st": 84.55,
+      "et": 89.94,
+      "txt": "But when I call you never seem to be home",
+      "trans": "但每次致电 总是无人接听",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "But ",
+          "st": 84.55,
+          "et": 84.75
+        },
+        {
+          "txt": "when ",
+          "st": 84.75,
+          "et": 84.92
+        },
+        {
+          "txt": "I ",
+          "st": 84.92,
+          "et": 85.24
+        },
+        {
+          "txt": "call ",
+          "st": 85.24,
+          "et": 85.53999999999999
+        },
+        {
+          "txt": "you ",
+          "st": 85.54,
+          "et": 86.51
+        },
+        {
+          "txt": "never ",
+          "st": 86.51,
+          "et": 88.59
+        },
+        {
+          "txt": "seem ",
+          "st": 88.59,
+          "et": 88.94
+        },
+        {
+          "txt": "to ",
+          "st": 88.94,
+          "et": 89.2
+        },
+        {
+          "txt": "be ",
+          "st": 89.2,
+          "et": 89.61
+        },
+        {
+          "txt": "home",
+          "st": 89.61,
+          "et": 89.94
+        }
+      ]
+    },
+    {
+      "st": 91.73,
+      "et": 93.83,
+      "txt": "Hello from the outside",
+      "trans": "一声你好 来自千里之外",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 91.73,
+          "et": 92.24000000000001
+        },
+        {
+          "txt": "from ",
+          "st": 92.24,
+          "et": 92.53999999999999
+        },
+        {
+          "txt": "the ",
+          "st": 92.54,
+          "et": 92.89
+        },
+        {
+          "txt": "outside",
+          "st": 92.89,
+          "et": 93.83
+        }
+      ]
+    },
+    {
+      "st": 97.32,
+      "et": 103.78,
+      "txt": "At least I can say that I've tried to tell you",
+      "trans": "至少我可以说 我曾努力想告诉你",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "At ",
+          "st": 97.32,
+          "et": 97.53999999999999
+        },
+        {
+          "txt": "least ",
+          "st": 97.54,
+          "et": 98.4
+        },
+        {
+          "txt": "I ",
+          "st": 98.4,
+          "et": 98.65
+        },
+        {
+          "txt": "can ",
+          "st": 98.65,
+          "et": 98.85000000000001
+        },
+        {
+          "txt": "say ",
+          "st": 98.85,
+          "et": 99.11999999999999
+        },
+        {
+          "txt": "that ",
+          "st": 99.12,
+          "et": 99.39
+        },
+        {
+          "txt": "I've ",
+          "st": 99.39,
+          "et": 99.97
+        },
+        {
+          "txt": "tried ",
+          "st": 99.97,
+          "et": 102.92
+        },
+        {
+          "txt": "to ",
+          "st": 102.92,
+          "et": 103.13
+        },
+        {
+          "txt": "tell ",
+          "st": 103.13,
+          "et": 103.47999999999999
+        },
+        {
+          "txt": "you",
+          "st": 103.48,
+          "et": 103.78
+        }
+      ]
+    },
+    {
+      "st": 104.41,
+      "et": 108.13,
+      "txt": "I'm sorry for breaking your heart",
+      "trans": "对不起 我伤透你心",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I'm ",
+          "st": 104.41,
+          "et": 104.64
+        },
+        {
+          "txt": "sorry ",
+          "st": 104.64,
+          "et": 106.69
+        },
+        {
+          "txt": "for ",
+          "st": 106.69,
+          "et": 106.89999999999999
+        },
+        {
+          "txt": "breaking ",
+          "st": 106.9,
+          "et": 107.54
+        },
+        {
+          "txt": "your ",
+          "st": 107.54,
+          "et": 107.79
+        },
+        {
+          "txt": "heart",
+          "st": 107.79,
+          "et": 108.13000000000001
+        }
+      ]
+    },
+    {
+      "st": 108.67,
+      "et": 115.69,
+      "txt": "But it don't matter it clearly doesn't tear you apart anymore",
+      "trans": "但一切都已不重要 我已无法再令你心碎",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "But ",
+          "st": 108.67,
+          "et": 108.89
+        },
+        {
+          "txt": "it ",
+          "st": 108.89,
+          "et": 109.1
+        },
+        {
+          "txt": "don't ",
+          "st": 109.1,
+          "et": 109.50999999999999
+        },
+        {
+          "txt": "matter ",
+          "st": 109.51,
+          "et": 110.48
+        },
+        {
+          "txt": "it ",
+          "st": 110.48,
+          "et": 110.73
+        },
+        {
+          "txt": "clearly ",
+          "st": 110.73,
+          "et": 112.54
+        },
+        {
+          "txt": "doesn't ",
+          "st": 112.54,
+          "et": 112.75
+        },
+        {
+          "txt": "tear ",
+          "st": 112.75,
+          "et": 113.35
+        },
+        {
+          "txt": "you ",
+          "st": 113.35,
+          "et": 113.58
+        },
+        {
+          "txt": "apart ",
+          "st": 113.58,
+          "et": 114.98
+        },
+        {
+          "txt": "anymore",
+          "st": 114.98,
+          "et": 115.69
+        }
+      ]
+    },
+    {
+      "st": 121.93,
+      "et": 125.62,
+      "txt": "Hello how are you",
+      "trans": "你好 最近怎样？",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 121.93,
+          "et": 124.71000000000001
+        },
+        {
+          "txt": "how ",
+          "st": 124.71,
+          "et": 124.89
+        },
+        {
+          "txt": "are ",
+          "st": 124.89,
+          "et": 125.08
+        },
+        {
+          "txt": "you",
+          "st": 125.08,
+          "et": 125.62
+        }
+      ]
+    },
+    {
+      "st": 127.44,
+      "et": 131.95,
+      "txt": "It's so typical of me to talk about myself",
+      "trans": "我总说自己的事",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "It's ",
+          "st": 127.44,
+          "et": 127.62
+        },
+        {
+          "txt": "so ",
+          "st": 127.62,
+          "et": 127.91000000000001
+        },
+        {
+          "txt": "typical ",
+          "st": 127.91,
+          "et": 129.18
+        },
+        {
+          "txt": "of ",
+          "st": 129.18,
+          "et": 129.4
+        },
+        {
+          "txt": "me ",
+          "st": 129.4,
+          "et": 130.20000000000002
+        },
+        {
+          "txt": "to ",
+          "st": 130.2,
+          "et": 130.38
+        },
+        {
+          "txt": "talk ",
+          "st": 130.38,
+          "et": 130.6
+        },
+        {
+          "txt": "about ",
+          "st": 130.6,
+          "et": 131.51999999999998
+        },
+        {
+          "txt": "myself",
+          "st": 131.52,
+          "et": 131.95000000000002
+        }
+      ]
+    },
+    {
+      "st": 132.54,
+      "et": 137.56,
+      "txt": "I'm sorry I hope that you're well",
+      "trans": "抱歉 愿你一切安好",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I'm ",
+          "st": 132.54,
+          "et": 132.75
+        },
+        {
+          "txt": "sorry ",
+          "st": 132.75,
+          "et": 133.78
+        },
+        {
+          "txt": "I ",
+          "st": 133.78,
+          "et": 134.01
+        },
+        {
+          "txt": "hope ",
+          "st": 134.01,
+          "et": 136.53
+        },
+        {
+          "txt": "that ",
+          "st": 136.53,
+          "et": 136.72
+        },
+        {
+          "txt": "you're ",
+          "st": 136.72,
+          "et": 137.02
+        },
+        {
+          "txt": "well",
+          "st": 137.02,
+          "et": 137.56
+        }
+      ]
+    },
+    {
+      "st": 139.55,
+      "et": 142.87,
+      "txt": "Did you ever make it out of that town",
+      "trans": "你成功逃离",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Did ",
+          "st": 139.55,
+          "et": 139.74
+        },
+        {
+          "txt": "you ",
+          "st": 139.74,
+          "et": 139.96
+        },
+        {
+          "txt": "ever ",
+          "st": 139.96,
+          "et": 140.67000000000002
+        },
+        {
+          "txt": "make ",
+          "st": 140.67,
+          "et": 141.1
+        },
+        {
+          "txt": "it ",
+          "st": 141.1,
+          "et": 141.35
+        },
+        {
+          "txt": "out ",
+          "st": 141.35,
+          "et": 141.98999999999998
+        },
+        {
+          "txt": "of ",
+          "st": 141.99,
+          "et": 142.19
+        },
+        {
+          "txt": "that ",
+          "st": 142.19,
+          "et": 142.6
+        },
+        {
+          "txt": "town",
+          "st": 142.6,
+          "et": 142.87
+        }
+      ]
+    },
+    {
+      "st": 143.12,
+      "et": 145.439,
+      "txt": "Where nothing ever happened",
+      "trans": "那平淡无奇的小镇了吗？",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Where ",
+          "st": 143.12,
+          "et": 143.34900000000002
+        },
+        {
+          "txt": "nothing ",
+          "st": 143.349,
+          "et": 143.85899999999998
+        },
+        {
+          "txt": "ever ",
+          "st": 143.859,
+          "et": 144.679
+        },
+        {
+          "txt": "happened",
+          "st": 144.679,
+          "et": 145.439
+        }
+      ]
+    },
+    {
+      "st": 145.719,
+      "et": 146.949,
+      "txt": "It's no secret",
+      "trans": "我们俩的时间已经所剩无几",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "It's ",
+          "st": 145.719,
+          "et": 145.939
+        },
+        {
+          "txt": "no ",
+          "st": 145.939,
+          "et": 146.219
+        },
+        {
+          "txt": "secret",
+          "st": 146.219,
+          "et": 146.94899999999998
+        }
+      ]
+    },
+    {
+      "st": 148.679,
+      "et": 155.029,
+      "txt": "That the both of us are running out of time",
+      "trans": "这早已不是秘密",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "That ",
+          "st": 148.679,
+          "et": 148.889
+        },
+        {
+          "txt": "the ",
+          "st": 148.889,
+          "et": 149.209
+        },
+        {
+          "txt": "both ",
+          "st": 149.209,
+          "et": 150.139
+        },
+        {
+          "txt": "of ",
+          "st": 150.139,
+          "et": 150.669
+        },
+        {
+          "txt": "us ",
+          "st": 150.669,
+          "et": 152.239
+        },
+        {
+          "txt": "are ",
+          "st": 152.239,
+          "et": 152.449
+        },
+        {
+          "txt": "running ",
+          "st": 152.449,
+          "et": 153.87900000000002
+        },
+        {
+          "txt": "out ",
+          "st": 153.879,
+          "et": 154.489
+        },
+        {
+          "txt": "of ",
+          "st": 154.489,
+          "et": 154.709
+        },
+        {
+          "txt": "time",
+          "st": 154.709,
+          "et": 155.029
+        }
+      ]
+    },
+    {
+      "st": 158.509,
+      "et": 160.869,
+      "txt": "So hello from the other side",
+      "trans": "一声你好 来自世界彼端",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "So hello ",
+          "st": 158.509,
+          "et": 158.85899999999998
+        },
+        {
+          "txt": "from ",
+          "st": 158.859,
+          "et": 159.499
+        },
+        {
+          "txt": "the ",
+          "st": 159.499,
+          "et": 159.809
+        },
+        {
+          "txt": "other ",
+          "st": 159.809,
+          "et": 160.559
+        },
+        {
+          "txt": "side",
+          "st": 160.559,
+          "et": 160.869
+        }
+      ]
+    },
+    {
+      "st": 164.299,
+      "et": 170.589,
+      "txt": "I must've called a thousand times to tell you",
+      "trans": "无数次拨打这个号码 只为告诉你",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I ",
+          "st": 164.299,
+          "et": 164.499
+        },
+        {
+          "txt": "must've ",
+          "st": 164.499,
+          "et": 164.97899999999998
+        },
+        {
+          "txt": "called ",
+          "st": 164.979,
+          "et": 165.40900000000002
+        },
+        {
+          "txt": "a ",
+          "st": 165.409,
+          "et": 165.769
+        },
+        {
+          "txt": "thousand ",
+          "st": 165.769,
+          "et": 166.459
+        },
+        {
+          "txt": "times ",
+          "st": 166.459,
+          "et": 169.519
+        },
+        {
+          "txt": "to ",
+          "st": 169.519,
+          "et": 169.87900000000002
+        },
+        {
+          "txt": "tell ",
+          "st": 169.879,
+          "et": 170.32899999999998
+        },
+        {
+          "txt": "you",
+          "st": 170.329,
+          "et": 170.589
+        }
+      ]
+    },
+    {
+      "st": 171.199,
+      "et": 175.009,
+      "txt": "I'm sorry for everything that I've done",
+      "trans": "我想为自己所做的一切说声抱歉",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I'm ",
+          "st": 171.199,
+          "et": 171.40900000000002
+        },
+        {
+          "txt": "sorry ",
+          "st": 171.409,
+          "et": 173.249
+        },
+        {
+          "txt": "for ",
+          "st": 173.249,
+          "et": 173.459
+        },
+        {
+          "txt": "everything ",
+          "st": 173.459,
+          "et": 174.099
+        },
+        {
+          "txt": "that ",
+          "st": 174.099,
+          "et": 174.349
+        },
+        {
+          "txt": "I've ",
+          "st": 174.349,
+          "et": 174.719
+        },
+        {
+          "txt": "done",
+          "st": 174.719,
+          "et": 175.009
+        }
+      ]
+    },
+    {
+      "st": 175.669,
+      "et": 181.089,
+      "txt": "But when I call you never seem to be home",
+      "trans": "但每次致电 总是无人接听",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "But ",
+          "st": 175.669,
+          "et": 175.859
+        },
+        {
+          "txt": "when ",
+          "st": 175.859,
+          "et": 176.15900000000002
+        },
+        {
+          "txt": "I ",
+          "st": 176.159,
+          "et": 176.529
+        },
+        {
+          "txt": "call ",
+          "st": 176.529,
+          "et": 176.72899999999998
+        },
+        {
+          "txt": "you ",
+          "st": 176.729,
+          "et": 177.55900000000003
+        },
+        {
+          "txt": "never ",
+          "st": 177.559,
+          "et": 179.819
+        },
+        {
+          "txt": "seem ",
+          "st": 179.819,
+          "et": 180.089
+        },
+        {
+          "txt": "to ",
+          "st": 180.089,
+          "et": 180.349
+        },
+        {
+          "txt": "be ",
+          "st": 180.349,
+          "et": 180.649
+        },
+        {
+          "txt": "home",
+          "st": 180.649,
+          "et": 181.089
+        }
+      ]
+    },
+    {
+      "st": 182.939,
+      "et": 184.969,
+      "txt": "Hello from the outside",
+      "trans": "一声你好 来自千里之外",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 182.939,
+          "et": 183.429
+        },
+        {
+          "txt": "from ",
+          "st": 183.429,
+          "et": 183.729
+        },
+        {
+          "txt": "the ",
+          "st": 183.729,
+          "et": 184.12900000000002
+        },
+        {
+          "txt": "outside",
+          "st": 184.129,
+          "et": 184.969
+        }
+      ]
+    },
+    {
+      "st": 188.609,
+      "et": 194.879,
+      "txt": "At least I can say that I've tried to tell you",
+      "trans": "至少我可以说 我曾努力想告诉你",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "At ",
+          "st": 188.609,
+          "et": 188.81900000000002
+        },
+        {
+          "txt": "least ",
+          "st": 188.819,
+          "et": 189.16899999999998
+        },
+        {
+          "txt": "I ",
+          "st": 189.169,
+          "et": 189.459
+        },
+        {
+          "txt": "can ",
+          "st": 189.459,
+          "et": 189.81900000000002
+        },
+        {
+          "txt": "say ",
+          "st": 189.819,
+          "et": 190.309
+        },
+        {
+          "txt": "that ",
+          "st": 190.309,
+          "et": 190.649
+        },
+        {
+          "txt": "I've ",
+          "st": 190.649,
+          "et": 191.059
+        },
+        {
+          "txt": "tried ",
+          "st": 191.059,
+          "et": 194.099
+        },
+        {
+          "txt": "to ",
+          "st": 194.099,
+          "et": 194.26899999999998
+        },
+        {
+          "txt": "tell ",
+          "st": 194.269,
+          "et": 194.619
+        },
+        {
+          "txt": "you",
+          "st": 194.619,
+          "et": 194.879
+        }
+      ]
+    },
+    {
+      "st": 195.519,
+      "et": 199.099,
+      "txt": "I'm sorry for breaking your heart",
+      "trans": "对不起 我伤透你心",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I'm ",
+          "st": 195.519,
+          "et": 195.729
+        },
+        {
+          "txt": "sorry ",
+          "st": 195.729,
+          "et": 197.74900000000002
+        },
+        {
+          "txt": "for ",
+          "st": 197.749,
+          "et": 197.939
+        },
+        {
+          "txt": "breaking ",
+          "st": 197.939,
+          "et": 198.57899999999998
+        },
+        {
+          "txt": "your ",
+          "st": 198.579,
+          "et": 198.809
+        },
+        {
+          "txt": "heart",
+          "st": 198.809,
+          "et": 199.099
+        }
+      ]
+    },
+    {
+      "st": 199.859,
+      "et": 206.488,
+      "txt": "But it don't matter it clearly doesn't tear you apart anymore",
+      "trans": "但一切都已不重要 我已无法再令你心碎",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "But ",
+          "st": 199.859,
+          "et": 200.049
+        },
+        {
+          "txt": "it ",
+          "st": 200.049,
+          "et": 200.209
+        },
+        {
+          "txt": "don't ",
+          "st": 200.209,
+          "et": 200.699
+        },
+        {
+          "txt": "matter ",
+          "st": 200.699,
+          "et": 201.699
+        },
+        {
+          "txt": "it ",
+          "st": 201.699,
+          "et": 201.90900000000002
+        },
+        {
+          "txt": "clearly ",
+          "st": 201.909,
+          "et": 203.69899999999998
+        },
+        {
+          "txt": "doesn't ",
+          "st": 203.699,
+          "et": 203.90900000000002
+        },
+        {
+          "txt": "tear ",
+          "st": 203.909,
+          "et": 204.118
+        },
+        {
+          "txt": "you ",
+          "st": 204.118,
+          "et": 204.468
+        },
+        {
+          "txt": "apart ",
+          "st": 204.468,
+          "et": 206.128
+        },
+        {
+          "txt": "anymore",
+          "st": 206.128,
+          "et": 206.488
+        }
+      ]
+    },
+    {
+      "st": 207.088,
+      "et": 213.128,
+      "txt": "Ooooohh anymore",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Ooooohh ",
+          "st": 207.088,
+          "et": 212.778
+        },
+        {
+          "txt": "anymore",
+          "st": 212.778,
+          "et": 213.128
+        }
+      ]
+    },
+    {
+      "st": 216.038,
+      "et": 219.207,
+      "txt": "Ooooohh anymore",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Ooooohh ",
+          "st": 216.038,
+          "et": 218.92700000000002
+        },
+        {
+          "txt": "anymore",
+          "st": 218.927,
+          "et": 219.207
+        }
+      ]
+    },
+    {
+      "st": 222.097,
+      "et": 225.457,
+      "txt": "Ooooohh anymore",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Ooooohh ",
+          "st": 222.097,
+          "et": 225.037
+        },
+        {
+          "txt": "anymore",
+          "st": 225.037,
+          "et": 225.457
+        }
+      ]
+    },
+    {
+      "st": 228.017,
+      "et": 228.657,
+      "txt": "Anymore",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Anymore",
+          "st": 228.017,
+          "et": 228.65699999999998
+        }
+      ]
+    },
+    {
+      "st": 231.517,
+      "et": 233.766,
+      "txt": "Hello from the other side",
+      "trans": "一声你好 来自世界彼端",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 231.517,
+          "et": 231.896
+        },
+        {
+          "txt": "from ",
+          "st": 231.896,
+          "et": 232.21599999999998
+        },
+        {
+          "txt": "the ",
+          "st": 232.216,
+          "et": 232.57600000000002
+        },
+        {
+          "txt": "other ",
+          "st": 232.576,
+          "et": 233.406
+        },
+        {
+          "txt": "side",
+          "st": 233.406,
+          "et": 233.76600000000002
+        }
+      ]
+    },
+    {
+      "st": 237.206,
+      "et": 243.505,
+      "txt": "I must've called a thousand times to tell you",
+      "trans": "无数次拨打这个号码 只为告诉你",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I ",
+          "st": 237.206,
+          "et": 237.40599999999998
+        },
+        {
+          "txt": "must've ",
+          "st": 237.406,
+          "et": 237.846
+        },
+        {
+          "txt": "called ",
+          "st": 237.846,
+          "et": 238.376
+        },
+        {
+          "txt": "a ",
+          "st": 238.376,
+          "et": 238.686
+        },
+        {
+          "txt": "thousand ",
+          "st": 238.686,
+          "et": 239.586
+        },
+        {
+          "txt": "times ",
+          "st": 239.586,
+          "et": 242.685
+        },
+        {
+          "txt": "to ",
+          "st": 242.685,
+          "et": 242.865
+        },
+        {
+          "txt": "tell ",
+          "st": 242.865,
+          "et": 243.215
+        },
+        {
+          "txt": "you",
+          "st": 243.215,
+          "et": 243.505
+        }
+      ]
+    },
+    {
+      "st": 244.265,
+      "et": 248.245,
+      "txt": "I'm sorry for everything that I've done",
+      "trans": "我想为自己所做的一切说声抱歉",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I'm ",
+          "st": 244.265,
+          "et": 244.48499999999999
+        },
+        {
+          "txt": "sorry ",
+          "st": 244.485,
+          "et": 246.19500000000002
+        },
+        {
+          "txt": "for ",
+          "st": 246.195,
+          "et": 246.345
+        },
+        {
+          "txt": "everything ",
+          "st": 246.345,
+          "et": 247.045
+        },
+        {
+          "txt": "that ",
+          "st": 247.045,
+          "et": 247.505
+        },
+        {
+          "txt": "I've ",
+          "st": 247.505,
+          "et": 247.89499999999998
+        },
+        {
+          "txt": "done",
+          "st": 247.895,
+          "et": 248.245
+        }
+      ]
+    },
+    {
+      "st": 248.595,
+      "et": 253.865,
+      "txt": "But when I call you never seem to be home",
+      "trans": "但每次致电 总是无人接听",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "But ",
+          "st": 248.595,
+          "et": 248.835
+        },
+        {
+          "txt": "when ",
+          "st": 248.835,
+          "et": 249.025
+        },
+        {
+          "txt": "I ",
+          "st": 249.025,
+          "et": 249.225
+        },
+        {
+          "txt": "call ",
+          "st": 249.225,
+          "et": 249.545
+        },
+        {
+          "txt": "you ",
+          "st": 249.545,
+          "et": 250.665
+        },
+        {
+          "txt": "never ",
+          "st": 250.665,
+          "et": 252.70499999999998
+        },
+        {
+          "txt": "seem ",
+          "st": 252.705,
+          "et": 252.97500000000002
+        },
+        {
+          "txt": "to ",
+          "st": 252.975,
+          "et": 253.20499999999998
+        },
+        {
+          "txt": "be ",
+          "st": 253.205,
+          "et": 253.56500000000003
+        },
+        {
+          "txt": "home",
+          "st": 253.565,
+          "et": 253.865
+        }
+      ]
+    },
+    {
+      "st": 255.825,
+      "et": 257.725,
+      "txt": "Hello from the outside",
+      "trans": "一声你好 来自千里之外",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 255.825,
+          "et": 256.385
+        },
+        {
+          "txt": "from ",
+          "st": 256.385,
+          "et": 256.715
+        },
+        {
+          "txt": "the ",
+          "st": 256.715,
+          "et": 256.965
+        },
+        {
+          "txt": "outside",
+          "st": 256.965,
+          "et": 257.72499999999997
+        }
+      ]
+    },
+    {
+      "st": 261.535,
+      "et": 267.804,
+      "txt": "At least I can say that I've tried to tell you",
+      "trans": "至少我可以说 我曾努力想告诉你",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "At ",
+          "st": 261.535,
+          "et": 261.71500000000003
+        },
+        {
+          "txt": "least ",
+          "st": 261.715,
+          "et": 262.075
+        },
+        {
+          "txt": "I ",
+          "st": 262.075,
+          "et": 262.385
+        },
+        {
+          "txt": "can ",
+          "st": 262.385,
+          "et": 262.735
+        },
+        {
+          "txt": "say ",
+          "st": 262.735,
+          "et": 263.14500000000004
+        },
+        {
+          "txt": "that ",
+          "st": 263.145,
+          "et": 263.555
+        },
+        {
+          "txt": "I've ",
+          "st": 263.555,
+          "et": 263.90500000000003
+        },
+        {
+          "txt": "tried ",
+          "st": 263.905,
+          "et": 267.00399999999996
+        },
+        {
+          "txt": "to ",
+          "st": 267.004,
+          "et": 267.194
+        },
+        {
+          "txt": "tell ",
+          "st": 267.194,
+          "et": 267.534
+        },
+        {
+          "txt": "you",
+          "st": 267.534,
+          "et": 267.804
+        }
+      ]
+    },
+    {
+      "st": 268.444,
+      "et": 272.144,
+      "txt": "I'm sorry for breaking your heart",
+      "trans": "对不起 我伤透你心",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I'm ",
+          "st": 268.444,
+          "et": 268.874
+        },
+        {
+          "txt": "sorry ",
+          "st": 268.874,
+          "et": 270.684
+        },
+        {
+          "txt": "for ",
+          "st": 270.684,
+          "et": 270.874
+        },
+        {
+          "txt": "breaking ",
+          "st": 270.874,
+          "et": 271.494
+        },
+        {
+          "txt": "your ",
+          "st": 271.494,
+          "et": 271.79400000000004
+        },
+        {
+          "txt": "heart",
+          "st": 271.794,
+          "et": 272.144
+        }
+      ]
+    },
+    {
+      "st": 272.864,
+      "et": 280.964,
+      "txt": "But it don't matter it clearly doesn't tear you apart anymore",
+      "trans": "但一切都已不重要 我已无法再令你心碎",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "But ",
+          "st": 272.864,
+          "et": 273.07399999999996
+        },
+        {
+          "txt": "it ",
+          "st": 273.074,
+          "et": 273.36400000000003
+        },
+        {
+          "txt": "don't ",
+          "st": 273.364,
+          "et": 273.794
+        },
+        {
+          "txt": "matter ",
+          "st": 273.794,
+          "et": 274.50399999999996
+        },
+        {
+          "txt": "it ",
+          "st": 274.504,
+          "et": 274.774
+        },
+        {
+          "txt": "clearly ",
+          "st": 274.774,
+          "et": 276.584
+        },
+        {
+          "txt": "doesn't ",
+          "st": 276.584,
+          "et": 276.824
+        },
+        {
+          "txt": "tear ",
+          "st": 276.824,
+          "et": 277.29400000000004
+        },
+        {
+          "txt": "you ",
+          "st": 277.294,
+          "et": 277.544
+        },
+        {
+          "txt": "apart ",
+          "st": 277.544,
+          "et": 279.024
+        },
+        {
+          "txt": "anymore",
+          "st": 279.024,
+          "et": 280.964
+        }
+      ]
+    }
+  ],
+  "ai_status": "success",
+  "metadata": {
+    "title": "Hello",
+    "artist": "Adele",
+    "album": null,
+    "duration_ms": 0,
+    "style_instruction": null,
+    "ai_config": null
+  },
+  "credits": [
+    "Hello - Adele",
+    "Written by：Adele Adkins/Greg Kurstin"
+  ]
+}

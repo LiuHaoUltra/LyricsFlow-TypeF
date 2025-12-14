@@ -1,0 +1,1808 @@
+{
+  "type": "syllable",
+  "lines": [
+    {
+      "st": 0.0,
+      "et": 6.7,
+      "txt": "Hello Lit Lords Edition - Lit Lords/Adele 阿黛尔",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello",
+          "st": 0.0,
+          "et": 0.291
+        },
+        {
+          "txt": " ",
+          "st": 0.291,
+          "et": 0.582
+        },
+        {
+          "txt": "",
+          "st": 0.582,
+          "et": 0.873
+        },
+        {
+          "txt": "Lit",
+          "st": 0.873,
+          "et": 1.164
+        },
+        {
+          "txt": " ",
+          "st": 1.164,
+          "et": 1.4549999999999998
+        },
+        {
+          "txt": "Lords",
+          "st": 1.455,
+          "et": 1.746
+        },
+        {
+          "txt": " ",
+          "st": 1.746,
+          "et": 2.037
+        },
+        {
+          "txt": "Edition",
+          "st": 2.037,
+          "et": 2.328
+        },
+        {
+          "txt": "",
+          "st": 2.328,
+          "et": 2.6189999999999998
+        },
+        {
+          "txt": " ",
+          "st": 2.619,
+          "et": 2.91
+        },
+        {
+          "txt": "-",
+          "st": 2.91,
+          "et": 3.201
+        },
+        {
+          "txt": " ",
+          "st": 3.201,
+          "et": 3.492
+        },
+        {
+          "txt": "Lit",
+          "st": 3.492,
+          "et": 3.783
+        },
+        {
+          "txt": " ",
+          "st": 3.783,
+          "et": 4.074
+        },
+        {
+          "txt": "Lords",
+          "st": 4.074,
+          "et": 4.365
+        },
+        {
+          "txt": "/",
+          "st": 4.365,
+          "et": 4.656000000000001
+        },
+        {
+          "txt": "Adele",
+          "st": 4.656,
+          "et": 4.947
+        },
+        {
+          "txt": " ",
+          "st": 4.947,
+          "et": 5.238
+        },
+        {
+          "txt": "",
+          "st": 5.238,
+          "et": 5.529000000000001
+        },
+        {
+          "txt": "阿",
+          "st": 5.529,
+          "et": 5.82
+        },
+        {
+          "txt": "黛",
+          "st": 5.82,
+          "et": 6.111000000000001
+        },
+        {
+          "txt": "尔",
+          "st": 6.111,
+          "et": 6.402
+        },
+        {
+          "txt": "",
+          "st": 6.402,
+          "et": 6.6930000000000005
+        }
+      ]
+    },
+    {
+      "st": 6.705,
+      "et": 9.593,
+      "txt": "Hello",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello",
+          "st": 6.705,
+          "et": 7.417
+        }
+      ]
+    },
+    {
+      "st": 9.593,
+      "et": 12.681,
+      "txt": "It's me",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "It's ",
+          "st": 9.593,
+          "et": 9.801
+        },
+        {
+          "txt": "me",
+          "st": 9.801,
+          "et": 10.553
+        }
+      ]
+    },
+    {
+      "st": 12.681,
+      "et": 19.404,
+      "txt": "I was wondering if after all these years you'd like to meet",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I ",
+          "st": 12.681,
+          "et": 12.889
+        },
+        {
+          "txt": "was ",
+          "st": 12.889,
+          "et": 13.120999999999999
+        },
+        {
+          "txt": "wondering ",
+          "st": 13.121,
+          "et": 14.401
+        },
+        {
+          "txt": "if ",
+          "st": 14.401,
+          "et": 14.809
+        },
+        {
+          "txt": "after ",
+          "st": 14.809,
+          "et": 15.66
+        },
+        {
+          "txt": "all ",
+          "st": 15.66,
+          "et": 16.188
+        },
+        {
+          "txt": "these ",
+          "st": 16.188,
+          "et": 16.548
+        },
+        {
+          "txt": "years ",
+          "st": 16.548,
+          "et": 17.188
+        },
+        {
+          "txt": "you'd ",
+          "st": 17.188,
+          "et": 17.363999999999997
+        },
+        {
+          "txt": "like ",
+          "st": 17.364,
+          "et": 17.788
+        },
+        {
+          "txt": "to ",
+          "st": 17.788,
+          "et": 17.988
+        },
+        {
+          "txt": "meet",
+          "st": 17.988,
+          "et": 18.932
+        }
+      ]
+    },
+    {
+      "st": 19.404,
+      "et": 25.42,
+      "txt": "To go over everything",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "To ",
+          "st": 19.404,
+          "et": 19.58
+        },
+        {
+          "txt": "go ",
+          "st": 19.58,
+          "et": 19.915999999999997
+        },
+        {
+          "txt": "over ",
+          "st": 19.916,
+          "et": 20.956
+        },
+        {
+          "txt": "everything",
+          "st": 22.54,
+          "et": 24.012
+        }
+      ]
+    },
+    {
+      "st": 25.42,
+      "et": 29.62,
+      "txt": "They say that time's supposed to heal ya",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "They ",
+          "st": 25.42,
+          "et": 25.756
+        },
+        {
+          "txt": "say ",
+          "st": 25.756,
+          "et": 26.06
+        },
+        {
+          "txt": "that ",
+          "st": 26.06,
+          "et": 26.34
+        },
+        {
+          "txt": "time's ",
+          "st": 26.34,
+          "et": 27.132
+        },
+        {
+          "txt": "supposed ",
+          "st": 27.132,
+          "et": 27.988000000000003
+        },
+        {
+          "txt": "to ",
+          "st": 27.988,
+          "et": 28.22
+        },
+        {
+          "txt": "heal ",
+          "st": 28.22,
+          "et": 28.772
+        },
+        {
+          "txt": "ya",
+          "st": 28.772,
+          "et": 29.284
+        }
+      ]
+    },
+    {
+      "st": 29.62,
+      "et": 33.3,
+      "txt": "But I ain't done much healing",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "But ",
+          "st": 29.62,
+          "et": 29.796
+        },
+        {
+          "txt": "I ",
+          "st": 29.796,
+          "et": 29.964
+        },
+        {
+          "txt": "ain't ",
+          "st": 29.964,
+          "et": 30.131999999999998
+        },
+        {
+          "txt": "done ",
+          "st": 30.132,
+          "et": 30.596
+        },
+        {
+          "txt": "much ",
+          "st": 30.596,
+          "et": 31.06
+        },
+        {
+          "txt": "healing",
+          "st": 31.06,
+          "et": 32.3
+        }
+      ]
+    },
+    {
+      "st": 33.3,
+      "et": 39.96,
+      "txt": "Hello can you hear me",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 33.3,
+          "et": 34.556
+        },
+        {
+          "txt": "can ",
+          "st": 36.012,
+          "et": 36.204
+        },
+        {
+          "txt": "you ",
+          "st": 36.204,
+          "et": 36.38
+        },
+        {
+          "txt": "hear ",
+          "st": 36.38,
+          "et": 36.588
+        },
+        {
+          "txt": "me",
+          "st": 36.588,
+          "et": 37.396
+        }
+      ]
+    },
+    {
+      "st": 39.96,
+      "et": 46.2,
+      "txt": "Hello from the other side",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 39.96,
+          "et": 40.576
+        },
+        {
+          "txt": "from ",
+          "st": 40.576,
+          "et": 40.84
+        },
+        {
+          "txt": "the ",
+          "st": 40.84,
+          "et": 41.368
+        },
+        {
+          "txt": "other ",
+          "st": 41.368,
+          "et": 42.120000000000005
+        },
+        {
+          "txt": "side",
+          "st": 42.12,
+          "et": 45.455999999999996
+        }
+      ]
+    },
+    {
+      "st": 46.2,
+      "et": 52.52,
+      "txt": "I must've called a thousand times",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I ",
+          "st": 46.2,
+          "et": 46.408
+        },
+        {
+          "txt": "must've ",
+          "st": 46.408,
+          "et": 47.120000000000005
+        },
+        {
+          "txt": "called ",
+          "st": 47.12,
+          "et": 47.696
+        },
+        {
+          "txt": "a ",
+          "st": 47.696,
+          "et": 48.064
+        },
+        {
+          "txt": "thousand ",
+          "st": 48.064,
+          "et": 48.864
+        },
+        {
+          "txt": "times",
+          "st": 48.864,
+          "et": 51.928
+        }
+      ]
+    },
+    {
+      "st": 52.52,
+      "et": 56.098,
+      "txt": "To tell you I'm sorry",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "To ",
+          "st": 52.52,
+          "et": 53.104000000000006
+        },
+        {
+          "txt": "tell ",
+          "st": 53.104,
+          "et": 53.327999999999996
+        },
+        {
+          "txt": "you ",
+          "st": 53.328,
+          "et": 53.586000000000006
+        },
+        {
+          "txt": "I'm ",
+          "st": 53.586,
+          "et": 53.897999999999996
+        },
+        {
+          "txt": "sorry",
+          "st": 54.354,
+          "et": 55.594
+        }
+      ]
+    },
+    {
+      "st": 56.098,
+      "et": 59.042,
+      "txt": "For everything that I've done",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "For ",
+          "st": 56.098,
+          "et": 56.314
+        },
+        {
+          "txt": "everything ",
+          "st": 56.314,
+          "et": 56.866
+        },
+        {
+          "txt": "that ",
+          "st": 56.866,
+          "et": 57.178
+        },
+        {
+          "txt": "I've ",
+          "st": 57.178,
+          "et": 57.602
+        },
+        {
+          "txt": "done",
+          "st": 57.602,
+          "et": 58.82599999999999
+        }
+      ]
+    },
+    {
+      "st": 59.042,
+      "et": 62.698,
+      "txt": "But when I call you never",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "But ",
+          "st": 59.042,
+          "et": 59.266
+        },
+        {
+          "txt": "when ",
+          "st": 59.266,
+          "et": 59.577999999999996
+        },
+        {
+          "txt": "I ",
+          "st": 59.578,
+          "et": 59.834
+        },
+        {
+          "txt": "call ",
+          "st": 59.834,
+          "et": 60.218
+        },
+        {
+          "txt": "you ",
+          "st": 60.218,
+          "et": 60.586000000000006
+        },
+        {
+          "txt": "never",
+          "st": 60.946,
+          "et": 62.169999999999995
+        }
+      ]
+    },
+    {
+      "st": 62.698,
+      "et": 66.538,
+      "txt": "Seem to be home",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Seem ",
+          "st": 62.698,
+          "et": 63.410000000000004
+        },
+        {
+          "txt": "to ",
+          "st": 63.41,
+          "et": 63.641999999999996
+        },
+        {
+          "txt": "be ",
+          "st": 63.642,
+          "et": 64.194
+        },
+        {
+          "txt": "home",
+          "st": 64.194,
+          "et": 65.522
+        }
+      ]
+    },
+    {
+      "st": 66.538,
+      "et": 72.65,
+      "txt": "Hello from the outside",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 66.538,
+          "et": 67.03399999999999
+        },
+        {
+          "txt": "from ",
+          "st": 67.034,
+          "et": 67.266
+        },
+        {
+          "txt": "the ",
+          "st": 67.266,
+          "et": 67.802
+        },
+        {
+          "txt": "outside",
+          "st": 67.802,
+          "et": 71.97800000000001
+        }
+      ]
+    },
+    {
+      "st": 72.65,
+      "et": 78.73,
+      "txt": "At least I can say that I've tried",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "At ",
+          "st": 72.65,
+          "et": 72.89
+        },
+        {
+          "txt": "least ",
+          "st": 72.89,
+          "et": 73.21
+        },
+        {
+          "txt": "I ",
+          "st": 73.21,
+          "et": 73.466
+        },
+        {
+          "txt": "can ",
+          "st": 73.466,
+          "et": 74.002
+        },
+        {
+          "txt": "say ",
+          "st": 74.002,
+          "et": 74.506
+        },
+        {
+          "txt": "that ",
+          "st": 74.506,
+          "et": 75.002
+        },
+        {
+          "txt": "I've ",
+          "st": 75.002,
+          "et": 75.32199999999999
+        },
+        {
+          "txt": "tried",
+          "st": 75.322,
+          "et": 78.282
+        }
+      ]
+    },
+    {
+      "st": 78.73,
+      "et": 82.898,
+      "txt": "To tell you I'm sorry",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "To ",
+          "st": 78.73,
+          "et": 78.93
+        },
+        {
+          "txt": "tell ",
+          "st": 78.93,
+          "et": 79.162
+        },
+        {
+          "txt": "you ",
+          "st": 79.162,
+          "et": 80.018
+        },
+        {
+          "txt": "I'm ",
+          "st": 80.018,
+          "et": 80.44200000000001
+        },
+        {
+          "txt": "sorry",
+          "st": 80.834,
+          "et": 82.05
+        }
+      ]
+    },
+    {
+      "st": 82.898,
+      "et": 84.962,
+      "txt": "For breaking your heart",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "For ",
+          "st": 82.898,
+          "et": 83.386
+        },
+        {
+          "txt": "breaking ",
+          "st": 83.386,
+          "et": 83.856
+        },
+        {
+          "txt": "your ",
+          "st": 83.856,
+          "et": 84.184
+        },
+        {
+          "txt": "heart",
+          "st": 84.184,
+          "et": 84.759
+        }
+      ]
+    },
+    {
+      "st": 84.962,
+      "et": 99.236,
+      "txt": "But it don't matter",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "But ",
+          "st": 84.962,
+          "et": 85.23400000000001
+        },
+        {
+          "txt": "it ",
+          "st": 85.234,
+          "et": 85.402
+        },
+        {
+          "txt": "don't ",
+          "st": 85.402,
+          "et": 85.634
+        },
+        {
+          "txt": "matter",
+          "st": 85.634,
+          "et": 86.706
+        }
+      ]
+    },
+    {
+      "st": 99.236,
+      "et": 106.252,
+      "txt": "Hello hello hello",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 99.236,
+          "et": 100.5
+        },
+        {
+          "txt": "hello ",
+          "st": 101.548,
+          "et": 102.388
+        },
+        {
+          "txt": "hello",
+          "st": 103.22,
+          "et": 103.844
+        }
+      ]
+    },
+    {
+      "st": 106.252,
+      "et": 109.794,
+      "txt": "Turn the beat on",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Turn ",
+          "st": 106.252,
+          "et": 106.44399999999999
+        },
+        {
+          "txt": "the ",
+          "st": 106.444,
+          "et": 106.628
+        },
+        {
+          "txt": "beat ",
+          "st": 106.628,
+          "et": 106.876
+        },
+        {
+          "txt": "on",
+          "st": 106.876,
+          "et": 107.18
+        }
+      ]
+    },
+    {
+      "st": 109.794,
+      "et": 111.211,
+      "txt": "Hello",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello",
+          "st": 109.794,
+          "et": 110.219
+        }
+      ]
+    },
+    {
+      "st": 111.211,
+      "et": 115.363,
+      "txt": "Can you hear me",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Can ",
+          "st": 111.211,
+          "et": 111.475
+        },
+        {
+          "txt": "you ",
+          "st": 111.475,
+          "et": 111.835
+        },
+        {
+          "txt": "hear ",
+          "st": 111.835,
+          "et": 112.28299999999999
+        },
+        {
+          "txt": "me",
+          "st": 112.283,
+          "et": 112.715
+        }
+      ]
+    },
+    {
+      "st": 115.363,
+      "et": 117.931,
+      "txt": "Can you hear me",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Can ",
+          "st": 115.363,
+          "et": 115.595
+        },
+        {
+          "txt": "you ",
+          "st": 115.595,
+          "et": 116.115
+        },
+        {
+          "txt": "hear ",
+          "st": 116.115,
+          "et": 116.803
+        },
+        {
+          "txt": "me",
+          "st": 116.803,
+          "et": 117.715
+        }
+      ]
+    },
+    {
+      "st": 117.931,
+      "et": 119.459,
+      "txt": "Can you hear me",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Can ",
+          "st": 117.931,
+          "et": 118.139
+        },
+        {
+          "txt": "you ",
+          "st": 118.139,
+          "et": 118.315
+        },
+        {
+          "txt": "hear ",
+          "st": 118.315,
+          "et": 118.515
+        },
+        {
+          "txt": "me",
+          "st": 118.515,
+          "et": 118.771
+        }
+      ]
+    },
+    {
+      "st": 119.459,
+      "et": 125.643,
+      "txt": "Hello from the other side",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 119.459,
+          "et": 119.971
+        },
+        {
+          "txt": "from ",
+          "st": 119.971,
+          "et": 120.251
+        },
+        {
+          "txt": "the ",
+          "st": 120.251,
+          "et": 120.867
+        },
+        {
+          "txt": "other ",
+          "st": 120.867,
+          "et": 121.483
+        },
+        {
+          "txt": "side",
+          "st": 121.483,
+          "et": 124.875
+        }
+      ]
+    },
+    {
+      "st": 125.643,
+      "et": 131.579,
+      "txt": "I must've called a thousand times",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "I ",
+          "st": 125.643,
+          "et": 125.867
+        },
+        {
+          "txt": "must've ",
+          "st": 125.867,
+          "et": 126.32300000000001
+        },
+        {
+          "txt": "called ",
+          "st": 126.323,
+          "et": 127.17099999999999
+        },
+        {
+          "txt": "a ",
+          "st": 127.171,
+          "et": 127.507
+        },
+        {
+          "txt": "thousand ",
+          "st": 127.507,
+          "et": 128.339
+        },
+        {
+          "txt": "times",
+          "st": 128.339,
+          "et": 131.107
+        }
+      ]
+    },
+    {
+      "st": 131.579,
+      "et": 135.461,
+      "txt": "To tell you I'm sorry",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "To ",
+          "st": 131.579,
+          "et": 131.79500000000002
+        },
+        {
+          "txt": "tell ",
+          "st": 131.795,
+          "et": 132.32299999999998
+        },
+        {
+          "txt": "you ",
+          "st": 132.323,
+          "et": 133.013
+        },
+        {
+          "txt": "I'm ",
+          "st": 133.013,
+          "et": 133.461
+        },
+        {
+          "txt": "sorry",
+          "st": 133.789,
+          "et": 135.01299999999998
+        }
+      ]
+    },
+    {
+      "st": 135.461,
+      "et": 138.533,
+      "txt": "For everything that I've done",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "For ",
+          "st": 135.461,
+          "et": 135.693
+        },
+        {
+          "txt": "everything ",
+          "st": 135.693,
+          "et": 136.221
+        },
+        {
+          "txt": "that ",
+          "st": 136.221,
+          "et": 136.613
+        },
+        {
+          "txt": "I've ",
+          "st": 136.613,
+          "et": 136.981
+        },
+        {
+          "txt": "done",
+          "st": 136.981,
+          "et": 138.221
+        }
+      ]
+    },
+    {
+      "st": 138.533,
+      "et": 142.221,
+      "txt": "But when I call you never",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "But ",
+          "st": 138.533,
+          "et": 138.749
+        },
+        {
+          "txt": "when ",
+          "st": 138.749,
+          "et": 138.94899999999998
+        },
+        {
+          "txt": "I ",
+          "st": 138.949,
+          "et": 139.16500000000002
+        },
+        {
+          "txt": "call ",
+          "st": 139.165,
+          "et": 139.589
+        },
+        {
+          "txt": "you ",
+          "st": 139.589,
+          "et": 139.941
+        },
+        {
+          "txt": "never",
+          "st": 140.341,
+          "et": 141.853
+        }
+      ]
+    },
+    {
+      "st": 142.221,
+      "et": 166.538,
+      "txt": "Seem to be home",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Seem ",
+          "st": 142.221,
+          "et": 142.83700000000002
+        },
+        {
+          "txt": "to ",
+          "st": 142.837,
+          "et": 143.20499999999998
+        },
+        {
+          "txt": "be ",
+          "st": 143.205,
+          "et": 143.60500000000002
+        },
+        {
+          "txt": "home",
+          "st": 143.605,
+          "et": 144.99699999999999
+        }
+      ]
+    },
+    {
+      "st": 166.538,
+      "et": 171.826,
+      "txt": "Hello from the outside",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 166.538,
+          "et": 166.75400000000002
+        },
+        {
+          "txt": "from ",
+          "st": 166.754,
+          "et": 167.13
+        },
+        {
+          "txt": "the ",
+          "st": 167.13,
+          "et": 167.394
+        },
+        {
+          "txt": "outside",
+          "st": 167.394,
+          "et": 171.058
+        }
+      ]
+    },
+    {
+      "st": 171.826,
+      "et": 175.162,
+      "txt": "To tell you I'm sorry",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "To ",
+          "st": 171.826,
+          "et": 172.04999999999998
+        },
+        {
+          "txt": "tell ",
+          "st": 172.05,
+          "et": 172.234
+        },
+        {
+          "txt": "you ",
+          "st": 172.234,
+          "et": 172.418
+        },
+        {
+          "txt": "I'm ",
+          "st": 172.418,
+          "et": 173.202
+        },
+        {
+          "txt": "sorry",
+          "st": 173.522,
+          "et": 174.69
+        }
+      ]
+    },
+    {
+      "st": 175.162,
+      "et": 177.858,
+      "txt": "For breaking your heart",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "For ",
+          "st": 175.162,
+          "et": 175.53
+        },
+        {
+          "txt": "breaking ",
+          "st": 175.53,
+          "et": 176.01
+        },
+        {
+          "txt": "your ",
+          "st": 176.01,
+          "et": 176.738
+        },
+        {
+          "txt": "heart",
+          "st": 176.738,
+          "et": 177.506
+        }
+      ]
+    },
+    {
+      "st": 177.858,
+      "et": 181.73,
+      "txt": "But it don't matter it clearly",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "But ",
+          "st": 177.858,
+          "et": 178.074
+        },
+        {
+          "txt": "it ",
+          "st": 178.074,
+          "et": 178.25
+        },
+        {
+          "txt": "don't ",
+          "st": 178.25,
+          "et": 178.506
+        },
+        {
+          "txt": "matter ",
+          "st": 178.506,
+          "et": 179.73
+        },
+        {
+          "txt": "it ",
+          "st": 180.074,
+          "et": 180.29000000000002
+        },
+        {
+          "txt": "clearly",
+          "st": 180.29,
+          "et": 181.322
+        }
+      ]
+    },
+    {
+      "st": 181.73,
+      "et": 186.11,
+      "txt": "Doesn't tear you apart anymore",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Doesn't ",
+          "st": 181.73,
+          "et": 182.41799999999998
+        },
+        {
+          "txt": "tear ",
+          "st": 182.418,
+          "et": 182.69
+        },
+        {
+          "txt": "you ",
+          "st": 182.69,
+          "et": 182.986
+        },
+        {
+          "txt": "apart ",
+          "st": 182.986,
+          "et": 184.386
+        },
+        {
+          "txt": "anymore",
+          "st": 184.81,
+          "et": 186.11
+        }
+      ]
+    },
+    {
+      "st": 186.11,
+      "et": 190.87,
+      "txt": "Showed I hope that won't think it's over",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Showed ",
+          "st": 186.11,
+          "et": 186.918
+        },
+        {
+          "txt": "I ",
+          "st": 186.918,
+          "et": 187.094
+        },
+        {
+          "txt": "hope ",
+          "st": 187.094,
+          "et": 187.286
+        },
+        {
+          "txt": "that ",
+          "st": 187.286,
+          "et": 187.47
+        },
+        {
+          "txt": "won't ",
+          "st": 187.47,
+          "et": 187.646
+        },
+        {
+          "txt": "think ",
+          "st": 187.646,
+          "et": 187.838
+        },
+        {
+          "txt": "it's ",
+          "st": 187.838,
+          "et": 188.07
+        },
+        {
+          "txt": "over",
+          "st": 188.07,
+          "et": 188.414
+        }
+      ]
+    },
+    {
+      "st": 190.87,
+      "et": 199.182,
+      "txt": "Oh Lord Jesus",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Oh ",
+          "st": 190.87,
+          "et": 192.326
+        },
+        {
+          "txt": "Lord ",
+          "st": 192.542,
+          "et": 192.742
+        },
+        {
+          "txt": "Jesus",
+          "st": 192.742,
+          "et": 193.12599999999998
+        }
+      ]
+    },
+    {
+      "st": 199.182,
+      "et": 200.79,
+      "txt": "Hello",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello",
+          "st": 199.182,
+          "et": 200.34199999999998
+        }
+      ]
+    },
+    {
+      "st": 200.79,
+      "et": 202.434,
+      "txt": "Hello",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello",
+          "st": 200.79,
+          "et": 202.07
+        }
+      ]
+    },
+    {
+      "st": 202.434,
+      "et": 205.498,
+      "txt": "Hello",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello",
+          "st": 202.434,
+          "et": 202.946
+        }
+      ]
+    },
+    {
+      "st": 205.498,
+      "et": 209.538,
+      "txt": "Tell 'em f**ker",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Tell ",
+          "st": 205.498,
+          "et": 205.67399999999998
+        },
+        {
+          "txt": "'em ",
+          "st": 205.674,
+          "et": 205.842
+        },
+        {
+          "txt": "f**ker",
+          "st": 205.842,
+          "et": 206.33800000000002
+        }
+      ]
+    },
+    {
+      "st": 209.538,
+      "et": 216.866,
+      "txt": "Hello from the other side",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello ",
+          "st": 209.538,
+          "et": 210.14600000000002
+        },
+        {
+          "txt": "from ",
+          "st": 210.658,
+          "et": 210.83399999999997
+        },
+        {
+          "txt": "the ",
+          "st": 210.834,
+          "et": 211.026
+        },
+        {
+          "txt": "other ",
+          "st": 211.026,
+          "et": 211.786
+        },
+        {
+          "txt": "side",
+          "st": 211.786,
+          "et": 216.314
+        }
+      ]
+    },
+    {
+      "st": 216.866,
+      "et": 221.642,
+      "txt": "Can you hear me can you hear me can you hear me",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Can ",
+          "st": 216.866,
+          "et": 217.04100000000003
+        },
+        {
+          "txt": "you ",
+          "st": 217.041,
+          "et": 217.201
+        },
+        {
+          "txt": "hear ",
+          "st": 217.201,
+          "et": 217.498
+        },
+        {
+          "txt": "me ",
+          "st": 217.498,
+          "et": 217.85
+        },
+        {
+          "txt": "can ",
+          "st": 218.386,
+          "et": 218.57
+        },
+        {
+          "txt": "you ",
+          "st": 218.57,
+          "et": 218.738
+        },
+        {
+          "txt": "hear ",
+          "st": 218.738,
+          "et": 219.106
+        },
+        {
+          "txt": "me ",
+          "st": 219.106,
+          "et": 219.474
+        },
+        {
+          "txt": "can ",
+          "st": 219.882,
+          "et": 220.074
+        },
+        {
+          "txt": "you ",
+          "st": 220.074,
+          "et": 220.258
+        },
+        {
+          "txt": "hear ",
+          "st": 220.258,
+          "et": 220.714
+        },
+        {
+          "txt": "me",
+          "st": 220.714,
+          "et": 221.114
+        }
+      ]
+    },
+    {
+      "st": 221.642,
+      "et": 226.418,
+      "txt": "Can you hear me can you hear me can you hear me",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Can ",
+          "st": 221.642,
+          "et": 221.81
+        },
+        {
+          "txt": "you ",
+          "st": 221.81,
+          "et": 221.97
+        },
+        {
+          "txt": "hear ",
+          "st": 221.97,
+          "et": 222.386
+        },
+        {
+          "txt": "me ",
+          "st": 222.386,
+          "et": 222.81
+        },
+        {
+          "txt": "can ",
+          "st": 223.242,
+          "et": 223.434
+        },
+        {
+          "txt": "you ",
+          "st": 223.434,
+          "et": 223.618
+        },
+        {
+          "txt": "hear ",
+          "st": 223.618,
+          "et": 224.17
+        },
+        {
+          "txt": "me ",
+          "st": 224.17,
+          "et": 224.506
+        },
+        {
+          "txt": "can ",
+          "st": 224.857,
+          "et": 225.058
+        },
+        {
+          "txt": "you ",
+          "st": 225.058,
+          "et": 225.266
+        },
+        {
+          "txt": "hear ",
+          "st": 225.266,
+          "et": 225.81
+        },
+        {
+          "txt": "me",
+          "st": 225.81,
+          "et": 226.122
+        }
+      ]
+    },
+    {
+      "st": 226.418,
+      "et": 238.334,
+      "txt": "Can you hear me can you hear me can you hear me",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Can ",
+          "st": 226.418,
+          "et": 226.626
+        },
+        {
+          "txt": "you ",
+          "st": 226.626,
+          "et": 226.874
+        },
+        {
+          "txt": "hear ",
+          "st": 226.874,
+          "et": 227.45
+        },
+        {
+          "txt": "me ",
+          "st": 227.45,
+          "et": 227.778
+        },
+        {
+          "txt": "can ",
+          "st": 228.026,
+          "et": 228.24200000000002
+        },
+        {
+          "txt": "you ",
+          "st": 228.242,
+          "et": 228.53
+        },
+        {
+          "txt": "hear ",
+          "st": 228.53,
+          "et": 229.098
+        },
+        {
+          "txt": "me ",
+          "st": 229.098,
+          "et": 229.442
+        },
+        {
+          "txt": "can ",
+          "st": 229.914,
+          "et": 230.09799999999998
+        },
+        {
+          "txt": "you ",
+          "st": 230.098,
+          "et": 230.274
+        },
+        {
+          "txt": "hear ",
+          "st": 230.274,
+          "et": 230.914
+        },
+        {
+          "txt": "me",
+          "st": 230.914,
+          "et": 231.226
+        }
+      ]
+    },
+    {
+      "st": 238.334,
+      "et": 241.366,
+      "txt": "Hello",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "Hello",
+          "st": 238.334,
+          "et": 239.046
+        }
+      ]
+    },
+    {
+      "st": 241.366,
+      "et": 242.372,
+      "txt": "It's me",
+      "trans": null,
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": [
+        {
+          "txt": "It's ",
+          "st": 241.366,
+          "et": 241.566
+        },
+        {
+          "txt": "me",
+          "st": 241.566,
+          "et": 242.094
+        }
+      ]
+    }
+  ],
+  "ai_status": "success",
+  "metadata": {
+    "title": "Hello",
+    "artist": "Adele",
+    "album": null,
+    "duration_ms": 0,
+    "style_instruction": null,
+    "ai_config": null
+  },
+  "credits": []
+}

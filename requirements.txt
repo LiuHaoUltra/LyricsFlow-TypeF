@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+httpx
+pycryptodome
+rapidfuzz
+beautifulsoup4
+pydantic-settings
+python-multipart
+openai
+deep-translator

@@ -1,0 +1,808 @@
+{
+  "type": "syllable",
+  "lines": [
+    {
+      "st": 0.0,
+      "et": 0.0,
+      "txt": "Streets (Explicit) - Doja Cat",
+      "trans": "QQ音乐享有本翻译作品的著作权",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 0.81,
+      "et": 0.81,
+      "txt": "I've been goin' through some things",
+      "trans": "一直以来 我经历着许多事情",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 3.21,
+      "et": 3.21,
+      "txt": "Oh",
+      "trans": "//",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 3.4,
+      "et": 3.4,
+      "txt": "I struggle with my inner man",
+      "trans": "内心挣扎",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 5.31,
+      "et": 5.31,
+      "txt": "Yeah yeah",
+      "trans": "//",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 6.17,
+      "et": 6.17,
+      "txt": "I hustle I'll do what I can to get this money",
+      "trans": "奔波劳碌 我会为这笔钱尽我所能",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 9.21,
+      "et": 9.21,
+      "txt": "Blaq Tuxedo",
+      "trans": "//",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 9.64,
+      "et": 9.64,
+      "txt": "Don Dada on the Don Dada on the beat",
+      "trans": "Don和Dada参与制作",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 31.84,
+      "et": 31.84,
+      "txt": "Like you like you",
+      "trans": "如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 37.06,
+      "et": 37.06,
+      "txt": "Like you ooh",
+      "trans": "如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 39.87,
+      "et": 39.87,
+      "txt": "I found it hard to find someone like you",
+      "trans": "我很难再找到如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 45.04,
+      "et": 45.04,
+      "txt": "Like you like you",
+      "trans": "如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 50.75,
+      "et": 50.75,
+      "txt": "Send your location come through",
+      "trans": "把你的位置发送过来",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 53.54,
+      "et": 53.54,
+      "txt": "I can't sleep no more",
+      "trans": "我难以入睡",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 55.73,
+      "et": 55.73,
+      "txt": "In my head we belong",
+      "trans": "在我的幻想中 我们仍属于彼此",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 58.37,
+      "et": 58.37,
+      "txt": "And I can't be without you",
+      "trans": "我不能没有你",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 61.44,
+      "et": 61.44,
+      "txt": "Why can't I find no one like you",
+      "trans": "为何难以再找如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 64.21,
+      "et": 64.21,
+      "txt": "I can't sleep no more",
+      "trans": "我难以入睡",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 66.41,
+      "et": 66.41,
+      "txt": "In my head we belong",
+      "trans": "在我的幻想中 我们仍属于彼此",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 68.98,
+      "et": 68.98,
+      "txt": "And I can't be without you",
+      "trans": "我不能没有你",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 72.16,
+      "et": 72.16,
+      "txt": "Why can't I find no one like you",
+      "trans": "为何难以再找如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 75.49,
+      "et": 75.49,
+      "txt": "Baby we tried to fight it",
+      "trans": "宝贝我们曾试图与现状抗争",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 78.05,
+      "et": 78.05,
+      "txt": "We all been there some days",
+      "trans": "那些日子我们都经历过",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 80.74,
+      "et": 80.74,
+      "txt": "Thought I needed something else",
+      "trans": "我想我得想些其他办法",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 82.7,
+      "et": 82.7,
+      "txt": "And acted like I was okay",
+      "trans": "虽然表现得若无其事",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 86.05,
+      "et": 86.05,
+      "txt": "We just had to work it out",
+      "trans": "但我们必须解决问题",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 88.65,
+      "et": 88.65,
+      "txt": "And baby I needed space",
+      "trans": "宝贝我需要空间",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 91.36,
+      "et": 91.36,
+      "txt": "Ain't nobody 'round here on your level",
+      "trans": "没有人像你一样",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 94.03999999999999,
+      "et": 94.03999999999999,
+      "txt": "You're so far away",
+      "trans": "你离我如此遥远",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 97.25,
+      "et": 97.25,
+      "txt": "You're pouring your heart out",
+      "trans": "你对我付出真心",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 99.86,
+      "et": 99.86,
+      "txt": "I'm acting like I knew",
+      "trans": "我假装我已了解",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 102.75,
+      "et": 102.75,
+      "txt": "You held me so down",
+      "trans": "你让我如此沮丧",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 105.13,
+      "et": 105.13,
+      "txt": "So down I never grew oh",
+      "trans": "从未有过的伤心",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 108.09,
+      "et": 108.09,
+      "txt": "I tried to find out",
+      "trans": "试图寻找答案",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 110.45,
+      "et": 110.45,
+      "txt": "When none of them came through",
+      "trans": "却毫无头绪",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 113.06,
+      "et": 113.06,
+      "txt": "And now I'm stuck in the middle",
+      "trans": "现在我进退两难",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 114.55,
+      "et": 114.55,
+      "txt": "And baby had to pull me out oh",
+      "trans": "宝贝把我从痛苦中拉出来",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 117.06,
+      "et": 117.06,
+      "txt": "Like you like you",
+      "trans": "如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 122.42,
+      "et": 122.42,
+      "txt": "Like you ooh",
+      "trans": "如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 125.26,
+      "et": 125.26,
+      "txt": "I found it hard to find someone like you",
+      "trans": "我很难再找到如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 130.43,
+      "et": 130.43,
+      "txt": "Like you like you",
+      "trans": "如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 136.09,
+      "et": 136.09,
+      "txt": "Send your location come through",
+      "trans": "把你的位置发送过来",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 138.53,
+      "et": 138.53,
+      "txt": "Yeah",
+      "trans": "//",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 139.22,
+      "et": 139.22,
+      "txt": "Damn papa you a rare breed no comparing",
+      "trans": "你就像稀世珍宝 无与伦比",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 142.42000000000002,
+      "et": 142.42000000000002,
+      "txt": "And it's motherfuckin' scary",
+      "trans": "这令人害怕",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 144.45,
+      "et": 144.45,
+      "txt": "Tryna keep him 'cause I found him",
+      "trans": "想留住他 因为我遇到了他",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 146.46,
+      "et": 146.46,
+      "txt": "Let a ho know I ain't motherfuckin' sharing",
+      "trans": "让他知道 我不想与人分享",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 149.87,
+      "et": 149.87,
+      "txt": "I could take you to the parents then to Paris",
+      "trans": "我可以带你去见父母 然后我们去巴黎",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 153.07999999999998,
+      "et": 153.07999999999998,
+      "txt": "Plan a motherfuckin' wedding",
+      "trans": "策划一场婚礼",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 155.09,
+      "et": 155.09,
+      "txt": "You the type I wanna marry",
+      "trans": "你就是我想嫁的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 156.37,
+      "et": 156.37,
+      "txt": "Yeah",
+      "trans": "//",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 156.94,
+      "et": 156.94,
+      "txt": "And keep you merry",
+      "trans": "我会让你感到幸福",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 158.26,
+      "et": 158.26,
+      "txt": "I'll put the ring on when you ready",
+      "trans": "你准备好了我就给你戴上戒指",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 160.16,
+      "et": 160.16,
+      "txt": "We play our fantasies out in real life ways and",
+      "trans": "在我们日常生活里实现所有浪漫",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 162.66,
+      "et": 162.66,
+      "txt": "No Final Fantasy can we end these games though",
+      "trans": "要是没有最终幻想 那我们能结束这场游戏吗",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 165.41,
+      "et": 165.41,
+      "txt": "You give me energy make me feel lightweight",
+      "trans": "你给了我能量 让我觉得一身轻松",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 167.53,
+      "et": 167.53,
+      "txt": "Woo",
+      "trans": "//",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 167.77,
+      "et": 167.77,
+      "txt": "Like the birds of a feather baby",
+      "trans": "宝贝 物以类聚 人以群分",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 169.13,
+      "et": 169.13,
+      "txt": "Woo",
+      "trans": "//",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 169.27,
+      "et": 169.27,
+      "txt": "We real life made for each other",
+      "trans": "我们天生一对",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 170.98,
+      "et": 170.98,
+      "txt": "Woo",
+      "trans": "//",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 171.18,
+      "et": 171.18,
+      "txt": "And it's hard to keep my cool",
+      "trans": "让人很难保持冷静",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 173.32,
+      "et": 173.32,
+      "txt": "When other bitches tryna get with my dude and",
+      "trans": "当其他女人挖我墙角的时候",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 175.98,
+      "et": 175.98,
+      "txt": "When other chickens tryna get in my coop",
+      "trans": "当其他女人觊觎我家的时候",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 178.47,
+      "et": 178.47,
+      "txt": "'Cause you're a one in a million",
+      "trans": "因为你万里挑一",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 179.6,
+      "et": 179.6,
+      "txt": "There ain't no man like you",
+      "trans": "这世间不存在能和你相提并论的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 181.26,
+      "et": 181.26,
+      "txt": "Like you like you",
+      "trans": "如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 186.38,
+      "et": 186.38,
+      "txt": "Like you ooh",
+      "trans": "如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 189.2,
+      "et": 189.2,
+      "txt": "I found it hard to find someone like you",
+      "trans": "我很难再找到如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 194.38,
+      "et": 194.38,
+      "txt": "Like you like you",
+      "trans": "如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 200.07999999999998,
+      "et": 200.07999999999998,
+      "txt": "Send your location come through",
+      "trans": "把你的位置发送过来",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 203.17000000000002,
+      "et": 203.17000000000002,
+      "txt": "I can't sleep no more",
+      "trans": "我难以入睡",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 205.07999999999998,
+      "et": 205.07999999999998,
+      "txt": "In my head we belong",
+      "trans": "在我的幻想中 我们仍属于彼此",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 207.72,
+      "et": 207.72,
+      "txt": "And I can't be without you",
+      "trans": "我不能没有你",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 210.77,
+      "et": 210.77,
+      "txt": "Why can't I find no one like you",
+      "trans": "为何难以再找如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 213.52,
+      "et": 213.52,
+      "txt": "I can't sleep no more",
+      "trans": "我难以入睡",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 215.75,
+      "et": 215.75,
+      "txt": "In my head we belong",
+      "trans": "在我的幻想中 我们仍属于彼此",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 218.42000000000002,
+      "et": 218.42000000000002,
+      "txt": "And I can't be without you",
+      "trans": "我不能没有你",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    },
+    {
+      "st": 221.38,
+      "et": 221.38,
+      "txt": "Why can't I find no one like you",
+      "trans": "为何难以再找如你一般的人",
+      "romaji": null,
+      "role": "main",
+      "explicit": false,
+      "words": []
+    }
+  ],
+  "ai_status": "success",
+  "metadata": {
+    "title": "Streets",
+    "artist": "Doja Cat",
+    "album": null,
+    "duration_ms": 0,
+    "style_instruction": null,
+    "ai_config": null
+  },
+  "credits": [
+    "Lyrics by：Amala Zandile Dlamini/Dominique Logan/Darius Logan/Ron Feemster/Omari Grandberry/Demarie Sheki/Christopher Jefferies",
+    "Composed by：Amala Zandile Dlamini/Dominique Logan/Darius Logan/Ron Feemster/Omari Grandberry/Demarie Sheki/Christopher Jefferies"
+  ]
+}
