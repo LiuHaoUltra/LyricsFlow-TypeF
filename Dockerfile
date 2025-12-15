@@ -19,4 +19,4 @@ COPY . .
 EXPOSE 9000
 
 # Run command
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "9000"]
+CMD ["sh", "-c", "exec uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-9000}"]
