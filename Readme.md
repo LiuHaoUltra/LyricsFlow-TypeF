@@ -71,7 +71,6 @@ TypeF 专为容器化环境设计，建议使用 Docker Compose 启动。
    ```bash
    git clone [https://github.com/liuhaoultra/lyricsflow-typef.git](https://github.com/liuhaoultra/lyricsflow-typef.git)
    cd lyricsflow-typef
-````
 
 2.  **构建并启动**
 
