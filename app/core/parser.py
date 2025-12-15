@@ -155,12 +155,7 @@ class QrcParser:
                 logger.warning("Empty lyric text found in QRC.")
                 return LyricsData(lines=[])
             
-            # Debug file (optional, can be removed in production)
-            try:
-                with open("debug_qrc_text.txt", "w", encoding="utf-8") as f:
-                    f.write(lyric_text)
-            except:
-                pass
+
             
             # 2. Parse QRC Text Format
             # Format: [123,456]Text(0,462)Text(462,462)...
