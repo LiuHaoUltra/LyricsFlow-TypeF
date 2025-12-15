@@ -13,7 +13,6 @@ from app.core.parser import QrcParser, ParsingError
 from app.core.cleaner import LyricsCleaner
 from app.core.uncensor import LyricsUncensor
 from app.schemas.models import LyricsData, SongMetadata, Line
-from app.meting import Meting
 
 logger = logging.getLogger(__name__)
 
@@ -45,8 +44,6 @@ class LyricsService:
         self.aggregator = Aggregator()
         self.storage = StorageService()
         self.ai_service = AIService()
-        # Meting instances for each platform
-        self._meting_instances: Dict[str, Meting] = {}
 
     def _simplify_artist(self, artist: str) -> str:
         if not artist: return ""
@@ -116,133 +113,6 @@ class LyricsService:
                 
         return False
 
-    def _get_meting(self, server: str) -> Meting:
-        """
-        Get or create a Meting instance for the specified server.
-        Instances are reused to maintain cookies/state.
-        """
-        if server not in self._meting_instances:
-            meting = Meting(server)
-            meting.format(True)
-            self._meting_instances[server] = meting
-        return self._meting_instances[server]
-
-    async def _fetch_via_meting(self, server: str, lyric_id: str, metadata: Optional[SongMetadata] = None) -> Optional[LyricsData]:
-        """
-        Fetch lyrics using Meting's unified API.
-        
-        Args:
-            server: Meting server name (netease, tencent, kugou)
-            lyric_id: The song/lyric ID for the platform
-            metadata: Optional metadata to attach to result
-            
-        Returns:
-            LyricsData object or None
-        """
-        try:
-            meting = self._get_meting(server)
-            lyric_result = await meting.lyric(lyric_id)
-            
-            if not lyric_result:
-                return None
-                
-            lyric_data = json.loads(lyric_result)
-            lyric_content = lyric_data.get('lyric', '')
-            trans_content = lyric_data.get('tlyric', '')
-            
-            if not lyric_content or not lyric_content.strip():
-                logger.warning(f"Meting ({server}): Empty lyrics for ID {lyric_id}")
-                return None
-            
-            # Build translation map if available
-            trans_map = {}
-            if trans_content:
-                for line in trans_content.splitlines():
-                    line = line.strip()
-                    if not line:
-                        continue
-                    match = re.search(r'\[(\d+):(\d+(\.\d+)?)\](.*)', line)
-                    if match:
-                        minutes = int(match.group(1))
-                        seconds = float(match.group(2))
-                        text = match.group(4).strip()
-                        time_sec = minutes * 60 + seconds
-                        trans_map[time_sec] = text
-                logger.info(f"Meting: Built translation map with {len(trans_map)} entries")
-            
-            # Parse LRC content
-            lines = []
-            for line_str in lyric_content.splitlines():
-                line_str = line_str.strip()
-                if not line_str:
-                    continue
-                match = re.search(r'\[(\d+):(\d+(\.\d+)?)\](.*)', line_str)
-                if match:
-                    minutes = int(match.group(1))
-                    seconds = float(match.group(2))
-                    text = match.group(4).strip()
-                    time_sec = minutes * 60 + seconds
-                    
-                    # Find matching translation
-                    trans_text = trans_map.get(time_sec)
-                    
-                    lines.append(Line(st=time_sec, et=time_sec, txt=text, trans=trans_text, words=[]))
-            
-            if not lines:
-                logger.warning(f"Meting ({server}): No valid lines parsed")
-                return None
-            
-            result = LyricsData(lines=lines)
-            
-            # Attach metadata
-            if metadata:
-                result.metadata = metadata
-            
-            # Apply TypeF cleaner
-            result = LyricsCleaner.clean(result)
-            result = LyricsUncensor.uncensor_lyrics(result)
-            
-            # Mark for AI enrichment
-            if not result.ai_status:
-                result.ai_status = "can_enrich"
-            
-            logger.info(f"Meting ({server}): Successfully parsed {len(result.lines)} lines")
-            return result
-            
-        except Exception as e:
-            logger.error(f"Meting ({server}) fetch error: {e}")
-            return None
-
-    async def _search_via_meting(self, keyword: str) -> List[Dict]:
-        """
-        Search all Meting platforms concurrently.
-        
-        Returns list of {server, id, name, artist, lyric_id} dicts.
-        """
-        platforms = ['netease', 'tencent', 'kugou']
-        all_results = []
-        
-        async def search_platform(server: str):
-            try:
-                meting = self._get_meting(server)
-                result = await meting.search(keyword)
-                songs = json.loads(result)
-                
-                # Add server info to each result
-                for song in songs:
-                    song['server'] = server
-                return songs
-            except Exception as e:
-                logger.warning(f"Meting search failed for {server}: {e}")
-                return []
-        
-        # Search all platforms concurrently
-        results = await asyncio.gather(*[search_platform(s) for s in platforms])
-        
-        for platform_results in results:
-            all_results.extend(platform_results)
-        
-        return all_results
 
     async def get_standardized_lyrics(self, song_id: str, provider: str, style_instruction: Optional[str] = None, ai_config: Optional['AIConfig'] = None, metadata: Optional[SongMetadata] = None) -> Optional[LyricsData]:
         """
@@ -578,8 +448,13 @@ class LyricsService:
                         # Title Only Strategy: Ignore artist score
                         score = title_score
                     else:
-                        # Use token_set_ratio to handle simplified/partial matches against full metadata
-                        artist_score = fuzz.token_set_ratio(meta.artist.lower(), res.artist.lower())
+                        # Use average of ratio (strict) and token_set_ratio (lenient)
+                        # This ensures exact artist matches (Doja Cat vs Doja Cat) score higher 
+                        # than partial matches (Doja Cat vs Doja Cat / Lin Yanjun)
+                        ratio = fuzz.ratio(meta.artist.lower(), res.artist.lower())
+                        token_set = fuzz.token_set_ratio(meta.artist.lower(), res.artist.lower())
+                        artist_score = (ratio + token_set) / 2
+                        
                         score = (title_score * 0.6) + (artist_score * 0.4)
                 else:
                     score = 100 if metadata.title in res.title else 50
@@ -609,174 +484,51 @@ class LyricsService:
         
         scored_candidates = candidates
         
-        # 3. Parallel Fetch: Get lyrics from top candidates concurrently
-        # Limit concurrency to avoid API rate limiting
-        MAX_PARALLEL = 5
-        CONCURRENCY_LIMIT = 3
+        # 3. Sequential Fetch: Get lyrics from top candidates one by one
+        # Prioritize strict score order and avoid unnecessary API calls or concurrency blocks.
+        MAX_CANDIDATES = 5
+        top_candidates = scored_candidates[:MAX_CANDIDATES]
+        logger.info(f"Fetching lyrics from top {len(top_candidates)} candidates sequentially...")
         
-        top_candidates = scored_candidates[:MAX_PARALLEL]
-        logger.info(f"Fetching lyrics from top {len(top_candidates)} candidates in parallel...")
-        
-        # Semaphore to limit concurrent requests
-        semaphore = asyncio.Semaphore(CONCURRENCY_LIMIT)
-        
-        async def fetch_one(candidate_data):
-            """Fetch lyrics for a single candidate with concurrency control."""
-            async with semaphore:
-                res = candidate_data['result']
-                try:
-                    ai_config = getattr(metadata, 'ai_config', None)
-                    style_instruction = getattr(metadata, 'style_instruction', None)
-                    
-                    lyrics_data = await self.get_standardized_lyrics(
-                        res.id, res.provider,
-                        style_instruction=style_instruction,
-                        ai_config=ai_config,
-                        metadata=metadata
-                    )
-                    return (candidate_data, lyrics_data)
-                except Exception as e:
-                    logger.warning(f"Failed to fetch lyrics from {res.provider}: {e}")
-                    return (candidate_data, None)
-        
-        # Execute all fetches in parallel
-        fetch_results = await asyncio.gather(*[fetch_one(c) for c in top_candidates])
-        
-        # Sort results by original score (highest first) and select best valid result
-        fetch_results_sorted = sorted(fetch_results, key=lambda x: x[0]['score'], reverse=True)
-        
-        best_lyric_candidate = None
         best_instrumental_candidate = None
         
-        for candidate_data, lyrics_data in fetch_results_sorted:
-            if not lyrics_data:
-                continue
-                
-            # Check for Instrumental/Empty
-            is_inst = self._is_instrumental(lyrics_data)
+        for candidate_data in top_candidates:
+            res = candidate_data['result']
+            logger.info(f"Attempting candidate: {res.provider} | {res.title} (Score: {candidate_data['score']})")
             
-            if is_inst:
-                logger.info(f"Detected Instrumental/Empty: {candidate_data['result'].title} (Score: {candidate_data['score']})")
-                if not best_instrumental_candidate:
-                    best_instrumental_candidate = lyrics_data
-            else:
-                logger.info(f"Found valid Lyrics: {candidate_data['result'].title} (Score: {candidate_data['score']})")
-                best_lyric_candidate = lyrics_data
-                break  # Found valid lyrics, stop processing
-        
-        if best_lyric_candidate:
-            return best_lyric_candidate
-             
+            try:
+                ai_config = getattr(metadata, 'ai_config', None)
+                style_instruction = getattr(metadata, 'style_instruction', None)
+                
+                lyrics_data = await self.get_standardized_lyrics(
+                    res.id, res.provider,
+                    style_instruction=style_instruction,
+                    ai_config=ai_config,
+                    metadata=metadata
+                )
+                
+                if not lyrics_data:
+                    logger.warning(f"Candidate {res.title} returned no lyrics.")
+                    continue
+
+                # Check for Instrumental/Empty
+                is_inst = self._is_instrumental(lyrics_data)
+                
+                if is_inst:
+                    logger.info(f"Detected Instrumental/Empty: {res.title}")
+                    if not best_instrumental_candidate:
+                        best_instrumental_candidate = lyrics_data
+                else:
+                    logger.info(f"Found valid Lyrics: {res.title}")
+                    return lyrics_data
+
+            except Exception as e:
+                logger.warning(f"Error fetching candidate {res.title}: {e}")
+                continue
+
         if best_instrumental_candidate:
             logger.info("No vocal lyrics found. Returning best instrumental candidate.")
             return best_instrumental_candidate
              
         return None
 
-    async def match_best_lyrics_meting(self, metadata: SongMetadata) -> Optional[LyricsData]:
-        """
-        Search and select the best lyric match using Meting (unified API).
-        
-        This method uses Meting for search and fetch, which provides:
-        - Unified {lyric, tlyric} format
-        - Built-in decryption (EAPI for Netease, Base64 for Tencent)
-        - Simpler, faster API calls
-        
-        Priority:
-        1. Metadata Similarity (Title/Artist)
-        2. Source priority (tencent > netease > kugou for syllable sync)
-        """
-        keyword = f"{metadata.artist} {metadata.title}".strip()
-        logger.info(f"Meting Search: {keyword}")
-        
-        # Search all platforms
-        all_results = await self._search_via_meting(keyword)
-        
-        if not all_results:
-            logger.info("Meting: No results found")
-            return None
-        
-        logger.info(f"Meting: Found {len(all_results)} total results")
-        
-        # Score and sort results
-        scored_results = []
-        for song in all_results:
-            name = song.get('name', '')
-            artists = song.get('artist', [])
-            if isinstance(artists, list):
-                artist_str = ', '.join(artists)
-            else:
-                artist_str = str(artists)
-            
-            score = 0
-            if fuzz:
-                title_score = fuzz.ratio(metadata.title.lower(), name.lower())
-                artist_score = fuzz.token_set_ratio(metadata.artist.lower(), artist_str.lower()) if metadata.artist else 0
-                score = (title_score * 0.6) + (artist_score * 0.4)
-            else:
-                score = 100 if metadata.title.lower() in name.lower() else 50
-            
-            # Bonus for tencent (syllable sync capability)
-            server = song.get('server', '')
-            if server == 'tencent':
-                score += 5
-            elif server == 'kugou':
-                score += 3
-            
-            if score >= 50:  # Threshold
-                scored_results.append({
-                    'song': song,
-                    'score': score,
-                    'server': server
-                })
-        
-        if not scored_results:
-            logger.info("Meting: No results above threshold")
-            return None
-        
-        # Sort by score descending
-        scored_results.sort(key=lambda x: x['score'], reverse=True)
-        logger.info(f"Meting: Top 5 candidates: {[(r['song'].get('name', ''), r['server'], r['score']) for r in scored_results[:5]]}")
-        
-        # Try to fetch lyrics from top candidates
-        MAX_TRIES = 5
-        best_instrumental = None
-        
-        for candidate in scored_results[:MAX_TRIES]:
-            song = candidate['song']
-            server = candidate['server']
-            lyric_id = song.get('lyric_id') or song.get('id')
-            
-            if not lyric_id:
-                continue
-            
-            logger.info(f"Meting: Trying {song.get('name', '')} from {server} (score: {candidate['score']:.1f})")
-            
-            lyrics_data = await self._fetch_via_meting(server, str(lyric_id), metadata)
-            
-            if lyrics_data:
-                # Check if instrumental
-                is_inst = self._is_instrumental(lyrics_data)
-                
-                if is_inst:
-                    logger.info("Meting: Detected instrumental, continuing search")
-                    if not best_instrumental:
-                        best_instrumental = lyrics_data
-                    continue
-                
-                # Valid lyrics found
-                logger.info(f"Meting: Found valid lyrics with {len(lyrics_data.lines)} lines")
-                
-                # Cache the result
-                cache_key = f"{server}_{lyric_id}"
-                self.storage.save(cache_key, server, lyrics_data)
-                
-                return lyrics_data
-        
-        # Return instrumental if no vocal lyrics found
-        if best_instrumental:
-            logger.info("Meting: Returning instrumental lyrics")
-            return best_instrumental
-        
-        logger.info("Meting: No valid lyrics found")
-        return None

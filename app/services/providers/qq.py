@@ -35,52 +35,46 @@ class QQMusicProvider(BaseProvider):
                 }
             }
         }
-
-        logger.info(f"Searching QQ Music: {url} with query '{query}'")
         
-        async with httpx.AsyncClient(timeout=self.timeout) as client:
-            try:
-                response = await client.post(url, json=payload, headers=self.headers)
-                response.raise_for_status()
-                data = response.json()
+        try:
+            client = self.client
+            response = await client.post(url, json=payload, headers=self.headers, timeout=self.timeout)
+            response.raise_for_status()
+            data = response.json()
+            
+            results = []
+            song_list = data.get("req_1", {}).get("data", {}).get("body", {}).get("song", {}).get("list", [])
+            
+            for song in song_list:
+                song_mid = song.get("mid")
+                song_id_num = song.get("id")
+                media_mid = song.get("file", {}).get("media_mid")
+                title = song.get("name")
+                album = song.get("album", {}).get("name")
                 
-                results = []
-                song_list = data.get("req_1", {}).get("data", {}).get("body", {}).get("song", {}).get("list", [])
+                singers = song.get("singer", [])
+                artist = ", ".join([s.get("name") for s in singers])
                 
-                for song in song_list:
-                    # Handle grouping if present, otherwise direct song object
-                    # Reference code logic: if results == null return null
+                if song_id_num and title:
+                    result = SearchResult(
+                        provider=self.provider_name,
+                        id=str(song_id_num),
+                        title=title,
+                        artist=artist,
+                        album=album if album else "",
+                        songmid=song_mid, 
+                        media_mid=media_mid
+                    )
+                    results.append(result)
                     
-                    song_mid = song.get("mid")
-                    song_id_num = song.get("id") # Numeric ID
-                    media_mid = song.get("file", {}).get("media_mid")
-                    title = song.get("name")
-                    album = song.get("album", {}).get("name")
-                    
-                    # Singers processing
-                    singers = song.get("singer", [])
-                    artist = ", ".join([s.get("name") for s in singers])
-                    
-                    if song_id_num and title:
-                        result = SearchResult(
-                            provider=self.provider_name,
-                            id=str(song_id_num), # Use numeric ID for lyric_download client API
-                            title=title,
-                            artist=artist,
-                            album=album if album else "",
-                            songmid=song_mid, 
-                            media_mid=media_mid
-                        )
-                        results.append(result)
-                        
-                return results
+            return results
 
-            except httpx.HTTPError as e:
-                logger.error(f"QQ Music search failed: {e}")
-                return []
-            except Exception as e:
-                logger.error(f"QQ Music search unexpected error: {e}")
-                return []
+        except httpx.HTTPError as e:
+            logger.error(f"QQ Music search failed: {e}")
+            return []
+        except Exception as e:
+            logger.error(f"QQ Music search unexpected error: {e}")
+            return []
 
     async def get_lyric_content(self, id: str, **kwargs) -> Union[bytes, Dict[str, any]]:
         """
@@ -110,90 +104,79 @@ class QQMusicProvider(BaseProvider):
         
         logger.info(f"Fetching lyric content from QQ Music (Client API): {url} for id {id}")
 
-        async with httpx.AsyncClient(timeout=self.timeout) as client:
-            try:
-                # MUST be POST with Form Data
-                response = await client.post(url, data=params, headers=headers)
-                response.raise_for_status()
-                
-                content_str = response.text
-                
-                # Cleanup typical XML garbage
-                # Reference code: content_str = content_str.replace("<!--", "").replace("-->", "")
-                content_str = content_str.replace("<!--", "").replace("-->", "")
-                
-                # Extract HEX string from <content> tag (main lyrics)
-                import re
-                
-                hex_str = ""
-                trans_lrc = ""
-                
-                # Pattern for CDATA wrapped content
-                match_cdata = re.search(r'<content[^>]*><!\[CDATA\[(.*?)\]\]>', content_str, re.DOTALL | re.IGNORECASE)
-                if match_cdata:
-                    hex_str = match_cdata.group(1).strip()
-                
-                # Try simple content tag if no CDATA match
-                if not hex_str:
-                    match_simple = re.search(r'<content[^>]*>(.*?)</content>', content_str, re.DOTALL | re.IGNORECASE)
-                    if match_simple:
-                        candidate = match_simple.group(1).strip()
-                        if not candidate.startswith("<![CDATA["): 
-                            hex_str = candidate
-                            
-                # Fallback to `lyric` tag if content not found
-                if not hex_str:
-                     match_lyric_cdata = re.search(r'<lyric[^>]*><!\[CDATA\[(.*?)\]\]>', content_str, re.DOTALL | re.IGNORECASE)
-                     if match_lyric_cdata:
-                         hex_str = match_lyric_cdata.group(1).strip()
-
-                # Extract translation from <contentts> tag (encrypted, not plain LRC!)
-                # QQ Music stores translation in <contentts> - also encrypted hex
-                trans_hex = ""
-                trans_match_cdata = re.search(r'<contentts[^>]*><!\[CDATA\[(.*?)\]\]>', content_str, re.DOTALL | re.IGNORECASE)
-                if trans_match_cdata:
-                    trans_hex = trans_match_cdata.group(1).strip()
-                    logger.info(f"Found Translation Hex in <contentts>. Length: {len(trans_hex)}")
-                else:
-                    trans_match_simple = re.search(r'<contentts[^>]*>(.*?)</contentts>', content_str, re.DOTALL | re.IGNORECASE)
-                    if trans_match_simple:
-                        candidate = trans_match_simple.group(1).strip()
-                        if not candidate.startswith("<![CDATA["):
-                            trans_hex = candidate
-                            logger.info(f"Found Translation Hex in <contentts>. Length: {len(trans_hex)}")
-                
-                # Also check for romaji in <contentroma>
-                roma_hex = ""
-                roma_match = re.search(r'<contentroma[^>]*><!\[CDATA\[(.*?)\]\]>', content_str, re.DOTALL | re.IGNORECASE)
-                if roma_match:
-                    roma_hex = roma_match.group(1).strip()
-                    logger.info(f"Found Romaji Hex in <contentroma>. Length: {len(roma_hex)}")
-
-                if hex_str:
-                    logger.info(f"Found QRC Hex Content. Length: {len(hex_str)}")
-                    try:
-                        content_bytes = bytes.fromhex(hex_str)
-                        # Convert trans_hex to bytes if present
-                        trans_bytes = bytes.fromhex(trans_hex) if trans_hex else b""
-                        roma_bytes = bytes.fromhex(roma_hex) if roma_hex else b""
+        try:
+            client = self.client
+            response = await client.post(url, data=params, headers=headers, timeout=self.timeout)
+            response.raise_for_status()
+            
+            content_str = response.text
+            content_str = content_str.replace("<!--", "").replace("-->", "")
+            
+            import re
+            
+            hex_str = ""
+            
+            # Pattern for CDATA wrapped content
+            match_cdata = re.search(r'<content[^>]*><!\[CDATA\[(.*?)\]\]>', content_str, re.DOTALL | re.IGNORECASE)
+            if match_cdata:
+                hex_str = match_cdata.group(1).strip()
+            
+            if not hex_str:
+                match_simple = re.search(r'<content[^>]*>(.*?)</content>', content_str, re.DOTALL | re.IGNORECASE)
+                if match_simple:
+                    candidate = match_simple.group(1).strip()
+                    if not candidate.startswith("<![CDATA["): 
+                        hex_str = candidate
                         
-                        # Return dict with all content
-                        return {
-                            "content": content_bytes,
-                            "trans": trans_bytes,  # Now bytes, needs decryption
-                            "roma": roma_bytes
-                        }
-                    except ValueError as e:
-                        logger.error(f"Hex conversion error: {e}")
-                        return b""
-                        
-                logger.warning(f"No QRC content found in response. Preview: {content_str[:200]}")
-                return b""
+            if not hex_str:
+                 match_lyric_cdata = re.search(r'<lyric[^>]*><!\[CDATA\[(.*?)\]\]>', content_str, re.DOTALL | re.IGNORECASE)
+                 if match_lyric_cdata:
+                     hex_str = match_lyric_cdata.group(1).strip()
 
-            except httpx.HTTPError as e:
-                logger.error(f"QQ Music lyric download failed: {e}")
-                return b""
-            except Exception as e:
-                logger.error(f"QQ Music lyric download unexpected error: {e}")
-                return b""
+            # Extract translation hex
+            trans_hex = ""
+            trans_match_cdata = re.search(r'<contentts[^>]*><!\[CDATA\[(.*?)\]\]>', content_str, re.DOTALL | re.IGNORECASE)
+            if trans_match_cdata:
+                trans_hex = trans_match_cdata.group(1).strip()
+                logger.info(f"Found Translation Hex in <contentts>. Length: {len(trans_hex)}")
+            else:
+                trans_match_simple = re.search(r'<contentts[^>]*>(.*?)</contentts>', content_str, re.DOTALL | re.IGNORECASE)
+                if trans_match_simple:
+                    candidate = trans_match_simple.group(1).strip()
+                    if not candidate.startswith("<![CDATA["):
+                        trans_hex = candidate
+                        logger.info(f"Found Translation Hex in <contentts>. Length: {len(trans_hex)}")
+            
+            # Check for romaji
+            roma_hex = ""
+            roma_match = re.search(r'<contentroma[^>]*><!\[CDATA\[(.*?)\]\]>', content_str, re.DOTALL | re.IGNORECASE)
+            if roma_match:
+                roma_hex = roma_match.group(1).strip()
+                logger.info(f"Found Romaji Hex in <contentroma>. Length: {len(roma_hex)}")
+
+            if hex_str:
+                logger.info(f"Found QRC Hex Content. Length: {len(hex_str)}")
+                try:
+                    content_bytes = bytes.fromhex(hex_str)
+                    trans_bytes = bytes.fromhex(trans_hex) if trans_hex else b""
+                    roma_bytes = bytes.fromhex(roma_hex) if roma_hex else b""
+                    
+                    return {
+                        "content": content_bytes,
+                        "trans": trans_bytes,
+                        "roma": roma_bytes
+                    }
+                except ValueError as e:
+                    logger.error(f"Hex conversion error: {e}")
+                    return b""
+                    
+            logger.warning(f"No QRC content found in response. Preview: {content_str[:200]}")
+            return b""
+
+        except httpx.HTTPError as e:
+            logger.error(f"QQ Music lyric download failed: {e}")
+            return b""
+        except Exception as e:
+            logger.error(f"QQ Music lyric download unexpected error: {e}")
+            return b""
 

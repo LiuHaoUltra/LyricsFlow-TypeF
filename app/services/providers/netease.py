@@ -34,63 +34,55 @@ class NeteaseProvider(BaseProvider):
         url = f"http://music.163.com/api/search/get/web?csrf_token=hlpretag=&hlposttag=&s={encoded_keyword}&type=1&offset=0&total=true&limit=20"
         
         try:
-            async with httpx.AsyncClient(timeout=self.timeout) as client:
-                response = await client.get(url, headers=self.headers)
-                response.raise_for_status()
-                resp_json = response.json()
-                
-                # Check response code
-                if resp_json.get("code") != 200:
-                    logger.warning(f"Netease API returned code: {resp_json.get('code')}")
-                    return []
-                
-                results = []
-                
-                # Robust parsing: 'result' might be string, dict, or None
-                result_data = resp_json.get("result")
-                if not result_data or not isinstance(result_data, dict):
-                    logger.debug("Netease search returned no valid result object")
-                    return []
-                
-                songs = result_data.get("songs", [])
-                if not songs:
-                    return []
+            client = self.client
+            response = await client.get(url, headers=self.headers, timeout=self.timeout)
+            response.raise_for_status()
+            resp_json = response.json()
+            
+            if resp_json.get("code") != 200:
+                logger.warning(f"Netease API returned code: {resp_json.get('code')}")
+                return []
+            
+            results = []
+            result_data = resp_json.get("result")
+            if not result_data or not isinstance(result_data, dict):
+                logger.debug("Netease search returned no valid result object")
+                return []
+            
+            songs = result_data.get("songs", [])
+            if not songs:
+                return []
 
-                for song in songs:
-                    if not isinstance(song, dict):
-                        continue
-                        
-                    song_id = str(song.get("id", ""))
-                    name = song.get("name", "")
+            for song in songs:
+                if not isinstance(song, dict):
+                    continue
                     
-                    # Handle artists array
-                    artists_data = song.get("artists", [])
-                    if isinstance(artists_data, list):
-                        artists = [ar.get("name", "") for ar in artists_data if isinstance(ar, dict)]
-                    else:
-                        artists = []
-                    artist_str = " / ".join(filter(None, artists))
-                    
-                    # Handle album object
-                    album_data = song.get("album")
-                    if isinstance(album_data, dict):
-                        album = album_data.get("name", "")
-                    else:
-                        album = ""
-                    
-                    # Get duration if available (in ms)
-                    duration_ms = song.get("duration", 0)
-                    
-                    results.append(SearchResult(
-                        provider=self.provider_name,
-                        id=song_id,
-                        title=name,
-                        artist=artist_str,
-                        album=album,
-                        songmid=song_id,
-                        media_mid=""
-                    ))
-                return results
+                song_id = str(song.get("id", ""))
+                name = song.get("name", "")
+                
+                artists_data = song.get("artists", [])
+                if isinstance(artists_data, list):
+                    artists = [ar.get("name", "") for ar in artists_data if isinstance(ar, dict)]
+                else:
+                    artists = []
+                artist_str = " / ".join(filter(None, artists))
+                
+                album_data = song.get("album")
+                if isinstance(album_data, dict):
+                    album = album_data.get("name", "")
+                else:
+                    album = ""
+                
+                results.append(SearchResult(
+                    provider=self.provider_name,
+                    id=song_id,
+                    title=name,
+                    artist=artist_str,
+                    album=album,
+                    songmid=song_id,
+                    media_mid=""
+                ))
+            return results
 
         except Exception as e:
             logger.error(f"Netease search error: {e}")
@@ -107,41 +99,10 @@ class NeteaseProvider(BaseProvider):
         
         try:
             encrypted_data = encrypt_weapi(data)
-            
-            async with httpx.AsyncClient(timeout=self.timeout) as client:
-                response = await client.post(url, data=encrypted_data, headers=self.headers)
-                response.raise_for_status()
-                
-                # Netease returns JSON with 'lrc' field. 
-                # LyricsService decryption step expects bytes.
-                # Since Netease response is already plaintext JSON (just the REQUEST is encrypted),
-                # We can return the JSON bytes directly, 
-                # and let LyricsService handle it in keys check?
-                
-                # But `lyrics_service.py` step 2 logic:
-                # if "qq" ... if "kugou" ... else `decode('utf-8')`.
-                
-                # So if I return raw JSON bytes, it will be decoded as UTF-8 string.
-                # Then in Parsing step, it expects XML (QRC) or PlainText (LRC)?
-                
-                # If I want to support Trans/YRC, I might need to preprocess here or in Parser?
-                # User request: "Extract `lrc`... and `tlyric`... if `yrc` available".
-                
-                # The generic `get_standardized_lyrics` pipeline is generic.
-                # Ideally, the `Parser` should handle Netease JSON if passed?
-                # But `QrcParser` handles XML.
-                
-                # Best approach:
-                # 1. Return the raw JSON bytes.
-                # 2. In `lyrics_service.py`, handle Netease specifically in Parsing step?
-                # OR
-                # 3. Extract the LRC *here* and return just the LRC string as bytes?
-                # But then we lose translation capability if generic parser doesn't support dual lyrics.
-                
-                # Given current tasks, let's return the Raw JSON bytes.
-                # And assume I might need to update `lyrics_service.py` to parse Netease JSON.
-                
-                return response.content
+            client = self.client
+            response = await client.post(url, data=encrypted_data, headers=self.headers, timeout=self.timeout)
+            response.raise_for_status()
+            return response.content
 
         except Exception as e:
             logger.error(f"Netease lyric fetch error: {e}")

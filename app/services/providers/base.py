@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional
 from dataclasses import dataclass
+from app.core.http_client import HttpClientManager
 
 @dataclass
 class SongMetadata:
@@ -24,6 +25,11 @@ class BaseProvider(ABC):
     @abstractmethod
     def provider_name(self) -> str:
         pass
+
+    @property
+    def client(self):
+        """Get shared HTTP client for all providers."""
+        return HttpClientManager.get_client()
 
     @abstractmethod
     async def search(self, metadata: SongMetadata) -> List[SearchResult]:

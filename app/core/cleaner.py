@@ -8,11 +8,6 @@ logger = logging.getLogger(__name__)
 class LyricsCleaner:
     """
     Utility to clean lyrics by removing credit lines and moving them to metadata/credits.
-    """
-    
-class LyricsCleaner:
-    """
-    Utility to clean lyrics by removing credit lines and moving them to metadata/credits.
     Implements a 'Safe & Smart' strategy to avoid false positives.
     """
     # LRC Standard Tags - always remove if line is ONLY this tag
@@ -72,6 +67,25 @@ class LyricsCleaner:
     METADATA_KEYS = [
         r"^Title", r"^Artist", r"^Album", r"^By", r"^Offset", r"^Prcoess"
     ]
+    
+    # 垃圾关键词列表 - 出现即删整行（全局生效）
+    # These keywords indicate non-lyric content that should always be removed
+    JUNK_KEYWORDS = [
+        # Chinese platforms
+        "QQ音乐", "此歌曲为", "发布于", "网易云", "酷狗", "酷我",
+        "禁止转载", "仅供学习", "版权归", "侵权删",
+        # English credits
+        "Produced by", "Provided by", "Copyright", "Composed by",
+        "Lyrics by", "Arranged by", "Written by", "Performed by",
+        "Licensed to", "Under exclusive", "All rights reserved",
+        # Platform watermarks
+        "LyricFind", "Source:", "from:",
+        # Other junk
+        "纯音乐", "无歌词", "Instrumental", "No Lyrics",
+    ]
+    
+    # Junk line pattern - matches lines that are ONLY timestamps without content
+    EMPTY_TIMESTAMP_PATTERN = re.compile(r'^\[\d{2}:\d{2}[\.:]\d{2,3}\]\s*$')
 
     @staticmethod
     def clean(lyrics: LyricsData) -> LyricsData:
@@ -120,6 +134,18 @@ class LyricsCleaner:
             if not is_credit and LyricsCleaner.METADATA_BRACKET_PATTERN.match(text):
                 is_credit = True
             
+            # Rule 0b: Catch-all for bracket metadata with long encoded content
+            # Matches [xxx:long_hex_or_base64_string]
+            if not is_credit and LyricsCleaner.METADATA_BRACKET_PATTERN.match(text):
+                is_credit = True
+            
+            # Rule 0c: REMOVED to respect Scope Limits (User Directive)
+            # Body lyrics should be safe from keyword scraping.
+            
+            # Rule 0d: Empty timestamp lines (only [00:00.00] with no text)
+            if not is_credit and LyricsCleaner.EMPTY_TIMESTAMP_PATTERN.match(text):
+                is_credit = True
+            
             # Rule 2: Zero-Time GC (Check this first as it applies globally to start)
             if not is_credit and line.st <= 0.5:
                 # Check for metadata keys
@@ -154,4 +180,82 @@ class LyricsCleaner:
         # Sort lines by st
         lyrics.lines.sort(key=lambda x: x.st)
         
+        # New Rule: Header Metadata Cleaning (Scope Limited)
+        lyrics.lines = LyricsCleaner.clean_header_metadata(lyrics.lines)
+        
         return lyrics
+
+    @staticmethod
+    def is_hard_junk(text: str) -> bool:
+        """
+        Detect absolute junk information (TME copyright, etc.)
+        Found anywhere in the checked scope (header), these cause deletion.
+        """
+        if not text: 
+            return False
+            
+        # Keywords that imply the line is definitely not lyrics
+        junk_keywords = [
+            "TME", "腾讯音乐", "QQMusic", "QQ音乐", 
+            "未经许可", "仅限", "试听"
+        ]
+        return any(k in text for k in junk_keywords)
+
+    @staticmethod
+    def is_credits_line(text: str) -> bool:
+        """
+        Detect production credits format (e.g., "词：方文山", "Composed by: ...")
+        Prevents false positives like "作曲家" (Composer) in lyrics.
+        Must match "Role : Name" format.
+        """
+        # Regex for "Role : Name" or "(Role)"
+        pattern = re.compile(r"^(作词|作曲|编曲|制作|Producer|Arranger|Composer|Lyricist)\s?[:：]", re.IGNORECASE)
+        return bool(pattern.match(text))
+
+    @staticmethod
+    def clean_header_metadata(lyrics_lines: List[Line]) -> List[Line]:
+        """
+        Smartly clean header metadata with scope locking.
+        Only scans the first 5 lines to avoid false positives in the main body.
+        """
+        if not lyrics_lines:
+            return []
+
+        # Scope Limit: Only scan first 5 lines
+        scan_limit = min(len(lyrics_lines), 5)
+        
+        start_index = 0
+        for i in range(scan_limit):
+            line = lyrics_lines[i]
+            text = line.txt.strip()
+            trans = line.trans if line.trans else "" # Ensure string
+
+            should_delete = False
+
+            # 1. Title Format: "Name - Artist"
+            # Strict Requirement: " Space-Space " to avoid "semi-final"
+            is_title_format = re.search(r".+\s+-\s+.+", text)
+            if is_title_format:
+                # If translation is empty OR hard junk -> Delete
+                if not trans or LyricsCleaner.is_hard_junk(trans):
+                    should_delete = True
+
+            # 2. Hard Junk (TME/Platform)
+            # If text OR trans contains hard junk -> Delete
+            if LyricsCleaner.is_hard_junk(trans) or LyricsCleaner.is_hard_junk(text):
+                 should_delete = True
+
+            # 3. Credits (Strict Format)
+            if LyricsCleaner.is_credits_line(text):
+                should_delete = True
+
+            if should_delete:
+                logger.info(f"Cleaner: Removed Header Line {i}: {text} | Trans: {trans}")
+                start_index = i + 1
+            else:
+                # If we keep a line, we keep going in case interleaved junk exists?
+                # The user's provided logic implies a contiguous cut (updating start_index).
+                # This treats the header as a contiguous block of potential junk.
+                pass
+
+        return lyrics_lines[start_index:]

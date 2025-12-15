@@ -39,51 +39,46 @@ class KugouProvider(BaseProvider):
         
         logger.info(f"Searching Kugou: {url} with query '{query}'")
         
-        async with httpx.AsyncClient(timeout=self.timeout) as client:
-            try:
-                response = await client.get(url, params=params, headers=self.headers)
-                response.raise_for_status()
-                data = response.json()
+        try:
+            client = self.client
+            response = await client.get(url, params=params, headers=self.headers, timeout=self.timeout)
+            response.raise_for_status()
+            data = response.json()
+            
+            results = []
+            info_list = data.get("data", {}).get("info", [])
+            
+            for item in info_list:
+                hash_val = item.get("hash")
+                songname = item.get("songname")
+                singername = item.get("singername")
+                album_name = item.get("album_name")
+                duration = item.get("duration", 0)
                 
-                results = []
-                # Check data.status == 1 ?
-                # Struct: Data.Info -> List
-                info_list = data.get("data", {}).get("info", [])
+                duration_ms = duration * 1000
+                safe_title = songname.replace("|", "")
+                composite_id = f"{hash_val}|{duration_ms}|{safe_title}"
                 
-                for item in info_list:
-                    hash_val = item.get("hash")
-                    songname = item.get("songname")
-                    singername = item.get("singername")
-                    album_name = item.get("album_name")
-                    duration = item.get("duration", 0) # Seconds
+                if hash_val and songname:
+                    result = SearchResult(
+                        provider=self.provider_name,
+                        id=composite_id,
+                        title=songname,
+                        artist=singername,
+                        album=album_name if album_name else "",
+                        songmid=hash_val,
+                        media_mid="",
+                    )
+                    results.append(result)
                     
-                    # We need hash and duration for lyric search
-                    # Encode them in ID: "hash|duration_ms|title"
-                    duration_ms = duration * 1000
-                    # Use songname as keyword/title. Ensure no pipes in title?
-                    safe_title = songname.replace("|", "")
-                    composite_id = f"{hash_val}|{duration_ms}|{safe_title}"
-                    
-                    if hash_val and songname:
-                        result = SearchResult(
-                            provider=self.provider_name,
-                            id=composite_id,
-                            title=songname,
-                            artist=singername,
-                            album=album_name if album_name else "",
-                            songmid=hash_val, # Use hash as songmid equivalent
-                            media_mid="", # Not applicable
-                        )
-                        results.append(result)
-                        
-                return results
-                
-            except httpx.HTTPError as e:
-                logger.error(f"Kugou search failed: {e}")
-                return []
-            except Exception as e:
-                logger.error(f"Kugou search unexpected error: {e}")
-                return []
+            return results
+            
+        except httpx.HTTPError as e:
+            logger.error(f"Kugou search failed: {e}")
+            return []
+        except Exception as e:
+            logger.error(f"Kugou search unexpected error: {e}")
+            return []
 
     async def get_lyric_content(self, id: str, **kwargs) -> bytes:
         # Step 1: Parse ID (hash|duration_ms|title)
@@ -116,58 +111,52 @@ class KugouProvider(BaseProvider):
         
         logger.info(f"Fetching Kugou Lyric Info: {search_url} for hash {hash_val}")
         
-        async with httpx.AsyncClient(timeout=self.timeout) as client:
-            try:
-                search_resp = await client.get(search_url, params=search_params, headers=self.headers)
-                search_resp.raise_for_status()
-                search_data = search_resp.json()
+        try:
+            client = self.client
+            search_resp = await client.get(search_url, params=search_params, headers=self.headers, timeout=self.timeout)
+            search_resp.raise_for_status()
+            search_data = search_resp.json()
+            
+            candidates = search_data.get("candidates", [])
+            if not candidates:
+                logger.warning("No lyric candidates found on Kugou.")
+                return b""
+            
+            candidate = candidates[0] 
+            cand_id = candidate.get("id")
+            access_key = candidate.get("accesskey")
+            
+            if not cand_id or not access_key:
+                logger.error("Candidate missing id or accesskey")
+                return b""
+            
+            # Step 3: Download Content
+            download_url = "http://lyrics.kugou.com/download"
+            download_params = {
+                "ver": "1",
+                "client": "pc",
+                "id": cand_id,
+                "accesskey": access_key,
+                "fmt": "krc",
+                "charset": "utf8"
+            }
+            
+            logger.info(f"Downloading Kugou Lyric Content: {download_url} id={cand_id}")
+            
+            dl_resp = await client.get(download_url, params=download_params, headers=self.headers, timeout=self.timeout)
+            dl_resp.raise_for_status()
+            dl_data = dl_resp.json()
+            
+            content_b64 = dl_data.get("content")
+            if not content_b64:
+                logger.warning("Download response missing 'content' field.")
+                return b""
                 
-                candidates = search_data.get("candidates", [])
-                if not candidates:
-                    logger.warning("No lyric candidates found on Kugou.")
-                    return b""
-                
-                # Pick best candidate?
-                # Sort by score? Or just take first.
-                # Attributes: id, accesskey, krctype, score, fmt
-                candidate = candidates[0] 
-                cand_id = candidate.get("id")
-                access_key = candidate.get("accesskey")
-                
-                if not cand_id or not access_key:
-                    logger.error("Candidate missing id or accesskey")
-                    return b""
-                
-                # Step 3: Download Content
-                # URL: http://lyrics.kugou.com/download
-                download_url = "http://lyrics.kugou.com/download"
-                download_params = {
-                    "ver": "1",
-                    "client": "pc",
-                    "id": cand_id,
-                    "accesskey": access_key,
-                    "fmt": "krc", # Request KRC
-                    "charset": "utf8"
-                }
-                
-                logger.info(f"Downloading Kugou Lyric Content: {download_url} id={cand_id}")
-                
-                dl_resp = await client.get(download_url, params=download_params, headers=self.headers)
-                dl_resp.raise_for_status()
-                dl_data = dl_resp.json()
-                
-                content_b64 = dl_data.get("content")
-                if not content_b64:
-                    logger.warning("Download response missing 'content' field.")
-                    return b""
-                    
-                # Return Base64 encoded bytes (to be handled by Decrypter)
-                # It is base64 string.
-                return base64.b64decode(content_b64)
+            return base64.b64decode(content_b64)
 
-            except httpx.HTTPError as e:
-                logger.error(f"Kugou lyric download failed: {e}")
-                return b""
-            except Exception as e:
-                logger.error(f"Kugou lyric download unexpected error: {e}")
-                return b""
+        except httpx.HTTPError as e:
+            logger.error(f"Kugou lyric download failed: {e}")
+            return b""
+        except Exception as e:
+            logger.error(f"Kugou lyric download unexpected error: {e}")
+            return b""

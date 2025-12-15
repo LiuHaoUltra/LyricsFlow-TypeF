@@ -49,8 +49,10 @@ class QrcParser:
                 text = match.group(3).strip()
                 time_sec = minutes * 60 + seconds
                 
-                # Skip empty translations and placeholder lines (like //)
-                if not text or text == '//' or text == '/' or text.startswith('//'):
+                # Special handling for // placeholders (interjections/empty lines)
+                if text == '//':
+                    text = ""
+                elif not text or text == '/' or text.startswith('//'):
                     continue
                     
                 trans_map[round(time_sec, 2)] = text
@@ -59,32 +61,44 @@ class QrcParser:
         return trans_map
     
     @staticmethod
-    def _find_trans_for_time(trans_map: Dict[float, str], target_time: float, tolerance: float = 0.5) -> Optional[str]:
+    def _apply_translations(lines: list[Line], trans_map: Dict[float, str], tolerance: float = 0.5):
         """
-        Find translation text for a given timestamp with tolerance.
+        Apply translations to lines using Reverse Best Match strategy.
+        Iterate through all translations and assign each to the single best matching QRC line.
         
         Args:
-            trans_map: Dict mapping time to translation
-            target_time: Target time in seconds
-            tolerance: Maximum time difference allowed
-            
-        Returns:
-            Translation text if found, None otherwise
+            lines: List of Line objects (mutated in place)
+            trans_map: Dict mapping time to translation text
+            tolerance: Max time difference allowed (seconds)
         """
-        if not trans_map:
-            return None
+        if not trans_map or not lines:
+            return
+
+        # Sort lines by start time just in case, though they should be sorted
+        # lines.sort(key=lambda x: x.st) 
+        
+        # Iterate over each translation (The "Scarcest Resource")
+        for t_time, t_text in trans_map.items():
+            best_line = None
+            min_diff = float('inf')
             
-        # Try exact match first (rounded)
-        rounded = round(target_time, 2)
-        if rounded in trans_map:
-            return trans_map[rounded]
-            
-        # Try with tolerance
-        for t, text in trans_map.items():
-            if abs(t - target_time) <= tolerance:
-                return text
+            # Find the best match in QRC lines
+            # Since both are time-ordered, this could be optimized, but N is small (<100).
+            for line in lines:
+                diff = abs(line.st - t_time)
                 
-        return None
+                # Check tolerance and best match
+                if diff <= tolerance and diff < min_diff:
+                    min_diff = diff
+                    best_line = line
+            
+            # Assign translation to the winner
+            if best_line:
+                # If the line already has a translation, we overwrite it.
+                # In Reverse Best Match, if multiple translations map to the same line,
+                # the one processed last writes. 
+                # (Or we could check min_diff vs existing? But usually timestamps differ enough)
+                best_line.trans = t_text
     
     @staticmethod
     def parse(xml_content: str, trans_content: Optional[str] = None) -> LyricsData:
@@ -251,30 +265,35 @@ class QrcParser:
                 
                 if words:
                     # Find translation for this line
-                    trans_text = QrcParser._find_trans_for_time(trans_map, line_st)
+                    line_txt = "".join(line_txt_parts)
+                    # trans_text will be applied later via Reverse Best Match
                     
                     parsed_lines.append(Line(
                         st=line_st,
                         et=line_et,
-                        txt="".join(line_txt_parts),
-                        trans=trans_text,
+                        txt=line_txt,
+                        trans="", # Initial empty
                         words=words
                     ))
                 elif content_part and content_part.strip():
                     # Fallback for LRC/Text lines without word tuples
-                    trans_text = QrcParser._find_trans_for_time(trans_map, line_st)
+                    line_txt = content_part.strip()
+                    # trans_text will be applied later
                     
                     parsed_lines.append(Line(
                         st=line_st,
                         et=line_et, # Unknown duration
                         txt=content_part.strip(),
-                        trans=trans_text,
+                        trans="", # Initial empty
                         words=[]
                     ))
 
             if not parsed_lines:
                 logger.warning("No parsed lines from QRC text.")
                 return LyricsData(lines=[])
+            
+            # Apply Translations (Reverse Best Match)
+            QrcParser._apply_translations(parsed_lines, trans_map, tolerance=0.5)
             
             return LyricsData(lines=parsed_lines)
 

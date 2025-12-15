@@ -7,7 +7,6 @@ from app.schemas.models import SongMetadata
 from app.services.providers.qq import QQMusicProvider
 from app.services.providers.kugou import KugouProvider
 from app.services.providers.netease import NeteaseProvider
-from app.services.providers.musixmatch import MusixmatchProvider
 
 logger = logging.getLogger(__name__)
 
@@ -29,12 +28,6 @@ class Aggregator:
         else:
             logger.info("QQ Music provider disabled")
             
-        if _is_enabled("ENABLE_MUSIXMATCH"):
-            self.providers.append(MusixmatchProvider())
-            logger.info("Musixmatch provider enabled")
-        else:
-            logger.info("Musixmatch provider disabled")
-            
         if _is_enabled("ENABLE_KUGOU"):
             self.providers.append(KugouProvider())
             logger.info("Kugou provider enabled")
@@ -52,51 +45,77 @@ class Aggregator:
 
     async def search_all(self, metadata: SongMetadata) -> List[SearchResult]:
         """
-        Search for songs across all registered providers concurrently.
-        Supports fallback strategies if strict search fails.
+        并发执行所有搜索策略（严谨搜索、模糊搜索、兜底搜索）。
         """
-        # Strategy 1: Strict Search (Original Metadata)
-        results = await self._execute_search(metadata)
-        if results:
-            return results
-            
-        logger.info("Strict search returned no results. Trying simplified artist...")
+        search_tasks = []
+
+        # 策略 1: 原始元数据 (Strict)
+        search_tasks.append(self._execute_search(metadata))
         
-        # Strategy 2: Simplified Artist
-        # Remove & , ; feat. etc.
+        # 策略 2: 简化艺人名 (Simplified Artist)
         simple_artist = self._simplify_artist(metadata.artist)
         if simple_artist != metadata.artist and simple_artist:
-            # Create temp metadata with simplified artist
-            # We use model_copy or just new instance if pydantic
-            # SongMetadata is Pydantic model? Yes.
             new_meta = metadata.model_copy(update={"artist": simple_artist})
-            results = await self._execute_search(new_meta)
-            if results:
-                logger.info(f"Simplified artist search found {len(results)} results.")
-                return results
+            search_tasks.append(self._execute_search(new_meta))
 
-        logger.info("Simplified search returned no results. Trying Title Only...")
+        # 策略 3: 仅歌名 (Title Only)
+        # 注意：已注释以减少搜索开销，提升响应速度
+        # 如需更宽泛的匹配，可取消注释
+        # if metadata.title:
+        #     title_meta = metadata.model_copy(update={"artist": ""})
+        #     search_tasks.append(self._execute_search(title_meta))
 
-        # Strategy 3: Title Only
-        if metadata.title:
-            new_meta = metadata.model_copy(update={"artist": ""})
-            results = await self._execute_search(new_meta)
-            if results:
-                 logger.info(f"Title-only search found {len(results)} results.")
-                 return results
-                 
-        return []
+        # 并发执行所有策略
+        logger.info(f"Firing {len(search_tasks)} search strategies concurrently...")
+        strategies_results = await asyncio.gather(*search_tasks)
+        
+        # 结果合并与去重
+        seen_ids = set()
+        final_results = []
+        
+        for strategy_res in strategies_results:
+            if not strategy_res: continue
+            for res in strategy_res:
+                # 唯一键：平台_歌曲ID
+                unique_key = f"{res.provider}_{res.id}"
+                if unique_key not in seen_ids:
+                    seen_ids.add(unique_key)
+                    final_results.append(res)
+        
+        logger.info(f"Concurrency search finished. Total unique candidates: {len(final_results)}")
+        return final_results
 
     async def _execute_search(self, metadata: SongMetadata) -> List[SearchResult]:
-        tasks = [provider.search(metadata) for provider in self.providers]
+        """
+        内部函数：并发调用所有 Enabled 的 Provider 进行搜索，并应用差异化超时。
+        """
+        
+        async def search_with_timeout(provider: BaseProvider) -> List[SearchResult]:
+            # --- 关键优化：差异化超时 ---
+            # 国内源（QQ/网易）通常很快，给 15s 作为兜底
+            timeout = 15.0
+            
+            try:
+                # 使用 asyncio.wait_for 强制超时
+                return await asyncio.wait_for(provider.search(metadata), timeout=timeout)
+            except asyncio.TimeoutError:
+                logger.warning(f"Provider {provider.provider_name} timed out after {timeout}s")
+                return []
+            except Exception as e:
+                logger.error(f"Provider {provider.provider_name} search failed: {e}")
+                return []
+
+        # 创建并发任务
+        tasks = [search_with_timeout(provider) for provider in self.providers]
         results_list = await asyncio.gather(*tasks, return_exceptions=True)
         
         all_results = []
         for result in results_list:
-            if isinstance(result, Exception):
-                logger.error(f"Provider search failed: {result}")
-            elif result:
+            if isinstance(result, list):
                 all_results.extend(result)
+            # 注意：由于我们在 search_with_timeout 里捕获了 Exception，
+            # 这里的 result 理论上只会是 list。但在极个别情况下做个类型检查更安全。
+            
         return all_results
 
     def _simplify_artist(self, artist: str) -> str:
@@ -118,8 +137,24 @@ class Aggregator:
             logger.error(f"Provider not found: {provider_name}")
             return None
             
-        try:
-            return await provider.get_lyric_content(song_id, **kwargs)
-        except Exception as e:
-            logger.error(f"Failed to fetch lyric from {provider_name}: {e}")
-            return None
+        # Retry mechanism to ensure reliable fetching (especially for Top Candidate)
+        max_retries = 3
+        last_error = None
+        
+        for attempt in range(max_retries):
+            try:
+                # 10s timeout per attempt
+                return await asyncio.wait_for(provider.get_lyric_content(song_id, **kwargs), timeout=10.0)
+            except asyncio.TimeoutError as e:
+                last_error = e
+                logger.warning(f"Fetch lyric from {provider_name} (ID: {song_id}) timed out (Attempt {attempt+1}/{max_retries})")
+            except Exception as e:
+                last_error = e
+                logger.warning(f"Failed to fetch lyric from {provider_name} (ID: {song_id}): {e} (Attempt {attempt+1}/{max_retries})")
+            
+            # Backoff before retry
+            if attempt < max_retries - 1:
+                await asyncio.sleep(0.5)
+                
+        logger.error(f"Given up fetching lyric from {provider_name} (ID: {song_id}) after {max_retries} attempts.")
+        return None

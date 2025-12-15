@@ -1,6 +1,6 @@
 fastapi
 uvicorn
-httpx
+httpx[http2]>=0.24.0
 pycryptodome
 rapidfuzz
 beautifulsoup4
